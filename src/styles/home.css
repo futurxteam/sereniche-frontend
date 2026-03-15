@@ -1,0 +1,130 @@
+.home {
+  position: relative;
+  color: white;
+}
+
+/* --- Fixed Background System --- */
+.bg-system {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg {
+  /* Placeholder gradient if image doesn't load/exist */
+  background: linear-gradient(to bottom right, #1a1a2e, #16213e);
+  background-image: url("/hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg {
+  background-position: 70% center;
+}
+
+
+.services-bg {
+  background: linear-gradient(to bottom right, #1f4037, #99f2c8);
+  background-image: url("/services.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.info-bg {
+  background-image: linear-gradient(to bottom right, rgba(43,88,118,0.7), rgba(78,67,118,0.7)), url("/bg4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -150px;
+  padding-top: calc(160px + 150px);
+  position: relative;
+  z-index: 3;
+}
+
+.faq-bg {
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  background-image: url("/bg3.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* curved bottom */
+.faq-bg::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+
+  background: inherit;
+  /* keeps same background */
+
+  border-top-left-radius: 100% 140px;
+  border-top-right-radius: 100% 140px;
+
+  z-index: 2;
+}
+
+.faq-bg {
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  background-image: url("/bg3.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* Prevents zooming on long containers */
+}
+
+/* --- Parallax System --- */
+.parallax-bg {
+  position: fixed;
+  inset: 0;
+  /* background-image: url("/pattern.png"); */
+  background-size: cover;
+  z-index: 0;
+}
+
+/* --- Scroll Content Container --- */
+.scroll-container {
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  min-height: 100vh;
+  padding: 120px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Content aesthetics for the demo */
+h1 {
+  font-size: 5rem;
+  letter-spacing: -2px;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  line-height: 1.6;
+  color: #ccc;
+}
