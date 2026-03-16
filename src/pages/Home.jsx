@@ -6,9 +6,14 @@ import Stats from "../components/Stats";
 import Info1 from "../components/Info1";
 import Info2 from "../components/Info2";
 import FAQ from "../components/FAQ";
+import FAQ2 from "../components/FAQ2";
 import CTA from "../components/CTA";
 import Navbar from "../components/Navbar";
 import CurvedTopBox from "../components/CurvedTopBox";
+import Journal from "../components/Journal";
+import Impact from "../components/Impact";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 import "../styles/home.css";
 import "../styles/navbar.css";
@@ -40,6 +45,10 @@ export default function Home() {
             <FAQ />
           </section>
 
+          <section id="faq2">
+            <FAQ2 />
+          </section>
+
           <section id="cta">
             <CTA />
           </section>
@@ -53,6 +62,14 @@ export default function Home() {
             <Info2 />
           </section>
         </CurvedTopBox>
+
+        {/* The White Page Footer Section */}
+        <div className="white-footer-section">
+          <Journal />
+          <Impact />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     </div>
   );

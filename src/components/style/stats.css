@@ -1,0 +1,50 @@
+.stats-section{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:90vh;
+  position:relative;
+  padding:0 8%;
+}
+
+/* NUMBER */
+
+.stats-right{
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.stats-number{
+  font-family:"Inter",sans-serif;
+  font-size:22rem;
+  font-weight:700;
+  color:#ffffff;
+  opacity:.9;
+  line-height:1;
+  letter-spacing:-8px;
+}
+
+/* TEXT */
+
+.stats-left{
+  max-width:520px;
+  margin-left:auto;
+}
+
+.stats-left h2{
+  font-family:"Playfair Display",serif;
+  font-size:4rem;
+  color:#ffffff;
+  margin-bottom:24px;
+  line-height:1.1;
+}
+
+.stats-left p{
+  font-family:"Inter",sans-serif;
+  font-size:1.15rem;
+  color:#ffffff;
+  opacity:.85;
+  line-height:1.7;
+}

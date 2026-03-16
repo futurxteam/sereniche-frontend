@@ -1,0 +1,55 @@
+.hero-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:100vh;
+  gap:80px;
+}
+
+/* LEFT SIDE */
+
+.hero-left{
+  flex:1;
+}
+
+.hero-title{
+  font-family: "Playfair Display", serif;
+  font-size:6rem;
+  font-weight:400;
+  line-height:1.05;
+  color:white;
+}
+
+/* RIGHT SIDE */
+
+.hero-right{
+  flex:1;
+  max-width:420px;
+}
+
+.hero-description{
+  font-size:1.1rem;
+  color:rgba(255,255,255,0.85);
+  line-height:1.7;
+  margin-bottom:40px;
+}
+
+/* LAVENDER BUTTON */
+
+.hero-button{
+  background:#b7a9e6;
+  color:white;
+  border:none;
+  padding:16px 36px;
+  border-radius:40px;
+  letter-spacing:2px;
+  font-size:0.75rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .25s ease;
+}
+
+.hero-button:hover{
+  background:#a090dd;
+  transform:translateY(-2px);
+}

@@ -1,0 +1,28 @@
+.cta-block{
+  text-align:center;
+  color:#000;
+}
+
+.cta-block p{
+  margin:0 auto;
+  max-width:600px;
+  color:#000;
+}
+
+.cta-btn{
+  margin-top:2rem;
+  padding:12px 32px;
+  font-size:1.1rem;
+  border-radius:30px;
+  border:none;
+  background:#c4b5fd; /* lavender */
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
+  transition:all .25s ease;
+}
+
+.cta-btn:hover{
+  background:#a78bfa;
+  transform:translateY(-2px);
+}

@@ -1,8 +1,35 @@
+import FadeIn from "./animations/fadein";
+import "./style/hero.css";
+
 export default function Hero() {
   return (
-    <div className="content-block">
-      <h1>The Future of Interfaces</h1>
-      <p>Scroll down to experience the seamless blend of static aesthetics and dynamic parallaxtic movement.</p>
+    <div className="hero-container">
+
+      <FadeIn>
+        <div className="hero-left">
+          <h1 className="hero-title">
+            A Path <br />
+            That Shapes <br />
+            Your Future.
+          </h1>
+        </div>
+      </FadeIn>
+
+      <FadeIn delay={0.3}>
+        <div className="hero-right">
+          <p className="hero-description">
+            We offer therapy and coaching to help you navigate life's
+            challenges with confidence and clarity.
+          </p>
+
+          <FadeIn delay={0.6}>
+            <button className="hero-button">
+              START YOUR JOURNEY
+            </button>
+          </FadeIn>
+        </div>
+      </FadeIn>
+
     </div>
   );
 }

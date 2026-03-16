@@ -1,0 +1,117 @@
+.balance-switch {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: .8rem;
+  letter-spacing: .25em;
+  z-index: 10;
+}
+
+.toggle {
+  width: 56px;
+  height: 28px;
+  border-radius: 20px;
+  position: relative;
+  padding: 3px;
+}
+
+.knob {
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+.switch-label {
+  font-size: .7rem;
+  letter-spacing: .2em;
+}
+
+.balance-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 8%;
+  position: relative;
+}
+
+.toggle-row {
+  position: absolute;
+  top: 60px; /* Moved up slightly */
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  letter-spacing: .25em;
+  font-size: 0.8rem;
+}
+
+.toggle {
+  width: 56px;
+  height: 28px;
+  border-radius: 20px;
+  position: relative;
+  padding: 3px;
+}
+
+.toggle-knob {
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+.switch-label {
+  font-size: 0.75rem;
+  width: 20px;
+}
+
+.balance-text {
+  position: absolute;
+  width: 100%;
+}
+
+.balance-text h1 {
+  font-size: 3.2rem; /* Reduced from 4rem for better fit */
+  line-height: 1.1;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.balance-text p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.balance-text.on {
+  color: #000;
+}
+
+.balance-text.on h1 {
+  font-size: 2rem;
+}
+
+.balance-text.on p {
+  font-size: 0.95rem;
+}
+
+.balance-text .accent {
+  color: #8fb19f;
+}
