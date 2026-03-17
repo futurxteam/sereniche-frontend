@@ -1,0 +1,90 @@
+/* SECTION */
+.impact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 140px 8%;
+  background: #f7f7f5;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.impact-left {
+  max-width: 520px;
+}
+
+.impact-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #9aa8a3;
+  margin-bottom: 20px;
+}
+
+.impact-heading {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #2c3532;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.impact-text {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.impact-btn {
+  background: #b583e6 !important;     /* stronger light lavender base */
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGES */
+.impact-images {
+  position: relative;
+  width: 400px;
+  height: 500px;
+}
+
+/* IMAGE WRAPPER */
+.impact-img {
+  position: absolute;
+  overflow: hidden;
+}
+
+.impact-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BACK IMAGE */
+.img-back {
+  width: 260px;
+  height: 340px;
+  right: 0;
+  top: 0;
+}
+
+/* FRONT IMAGE */
+.img-front {
+  width: 240px;
+  height: 320px;
+  left: 40px;
+  bottom: 0;
+}
+
+/* Optional soft shadow */
+.impact-img img {
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}

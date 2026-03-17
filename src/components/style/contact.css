@@ -1,0 +1,118 @@
+
+
+/* LAYOUT */
+.contact-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.contact-info {
+  max-width: 520px;
+}
+
+.contact-title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #2c3532;
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+/* Lavender highlight word */
+.contact-title span {
+  color: #b8a9c9;
+}
+
+/* DESCRIPTION */
+.contact-description {
+  font-size: 1.05rem;
+  color: #6b7280;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.contact-form-side {
+  width: 480px;
+  max-width: 100%;
+}
+
+/* HEADINGS */
+.form-header {
+  font-size: 1.8rem;
+  font-family: "Playfair Display", serif;
+  color: #2c3532;
+  margin-bottom: 40px;
+}
+
+.form-section-title {
+  font-size: 1.6rem;
+  font-family: "Playfair Display", serif;
+  color: #2c3532;
+  margin: 60px 0 20px;
+}
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d1d5db;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  background: transparent;
+  color: #2c3532;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* 🔥 FOCUS EFFECT (lavender glow) */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #b8a9c9;
+  box-shadow: 0 6px 12px -6px rgba(184, 169, 201, 0.6);
+}
+
+/* Hover (subtle) */
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-bottom: 1px solid #cdbbe6;
+}
+.form-group select {
+  appearance: none;
+  color: #6b7280;
+  cursor: pointer;
+}
+.form-group textarea {
+  resize: none;
+  line-height: 1.6;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  border-bottom: 1px solid #d1d5db;
+  background-image: linear-gradient(#b8a9c9, #b8a9c9);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  background-size: 100% 2px;
+}

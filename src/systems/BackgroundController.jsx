@@ -11,9 +11,10 @@ export default function BackgroundController() {
   const faqOpacity = useTransform(scrollYProgress, [0.32, 0.42], [0, 1]);
 
   // switch visibility (FAQ → FAQ2)
+  // Whole overlay fades out earlier so CTA content never overlaps balance text
   const switchOpacity = useTransform(
     scrollYProgress,
-    [0.30, 0.32, 0.46, 0.48],
+    [0.30, 0.32, 0.44, 0.46],
     [0, 1, 1, 0]
   );
 
@@ -37,7 +38,7 @@ export default function BackgroundController() {
   // label
   const labelOpacity = useTransform(
     scrollYProgress,
-    [0.36, 0.40],
+    [0.32, 0.38],
     [0, 1]
   );
   // small label text change
@@ -53,8 +54,14 @@ export default function BackgroundController() {
     [0, 1]
   );
   // TEXT SWITCH
-  const offOpacity = useTransform(scrollYProgress, [0.34, 0.38], [1, 0]);
-  const onOpacity = useTransform(scrollYProgress, [0.38, 0.42], [0, 1]);
+  const offOpacity = useTransform(scrollYProgress, [0.30, 0.34], [1, 0]);
+  // ON text fades in [0.38→0.42] then fades out [0.43→0.45] before CTA arrives
+const onOpacity = useTransform(
+  scrollYProgress,
+  [0.36, 0.40, 0.41, 0.43],
+  [0,   1,   1,   0]
+);
+  
 
   return (
     <div className="bg-system">

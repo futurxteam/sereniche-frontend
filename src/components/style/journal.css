@@ -1,0 +1,150 @@
+/* SECTION */
+.journal-section {
+  background: transparent;
+  padding: 120px 20px 140px;
+  text-align: center;
+}
+
+/* TOP CONTENT */
+.journal-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.journal-icon-box {
+  margin-bottom: 20px;
+  margin-right: 45px;
+}
+
+.journal-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #b583e6 !important;       /* brighter, more vivid lavender-purple */
+  margin-bottom: 16px !important;
+  text-transform: uppercase;
+  font-weight: 700;                /* optional: makes label stand out more */
+}
+
+.journal-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #2c3532;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.journal-description {
+  font-size: 1rem;
+  color: #6b7280;
+  max-width: 520px !important;
+  margin: 0 auto 40px auto !important;
+  line-height: 1.7;
+}
+
+/* MAIN BUTTON */
+.journal-button {
+  background: #c4a8e9 !important;     /* stronger light lavender base */
+  color: #fff !important;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(180, 140, 230, 0.25); /* subtle glow for importance */
+}
+
+.journal-button:hover {
+  background: #9f70d9 !important;     /* deeper, richer lavender-purple on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(159, 112, 217, 0.4);
+}
+
+.journal-cards {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.journal-card {
+  max-width: 260px;
+  text-align: center;
+}
+
+/* CENTER CARD FLOAT */
+.journal-card.center {
+  transform: translateY(-25px);
+}
+
+.blob {
+  width: 220px;
+  height: 260px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 58% 42% 63% 37% / 40% 55% 45% 60%;
+}
+
+.blob::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: inherit;
+}
+
+.blob img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.journal-card h3 {
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #2c3532;
+  margin-bottom: 10px;
+}
+
+.journal-card p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.journal-card button {
+  background: #c4a8e9 !important;     /* matching stronger lavender */
+  color: white !important;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(180, 140, 230, 0.2);
+}
+
+.journal-card button:hover {
+  background: #9f70d9 !important;     /* same deeper hover as main button */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(159, 112, 217, 0.35);
+}
+
+.blob img {
+  transition: transform 0.6s ease;
+}
+
+.journal-card:hover .blob img {
+  transform: scale(1.08);
+}

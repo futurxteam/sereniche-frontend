@@ -80,9 +80,11 @@
   top: 3px;
   left: 3px;
 }
+
 .balance-text {
   position: absolute;
-  top: 42%;            /* pushes text downward */
+  top: 42%;
+  /* pushes text downward */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -100,16 +102,19 @@
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+
 .balance-text.on h1 {
   background: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: #000;
   color: #000;
 }
+
 .balance-text.on p {
   color: #000;
   opacity: 1;
 }
+
 .balance-text p {
   font-size: 1.1rem;
   max-width: 600px;
@@ -178,6 +183,12 @@
   background-image: url("/bg3.png");
   background-size: cover;
   background-position: center;
+
+}
+
+#faq2 {
+  margin-bottom: 200px;
+  /* adjust 100–200 */
 }
 
 /* Make FAQ bg wrapper transparent so fixed layer shows through */
@@ -283,51 +294,9 @@ p {
   margin-bottom: 24px;
 }
 
-.journal-label {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin: 0 0 16px 0 !important;
-  color: #82a496 !important;
-  letter-spacing: 0.1em;
-  text-align: center;
-  display: block;
-  width: 100%;
-}
 
-.journal-title {
-  font-size: 3.5rem;
-  color: #2c3532;
-  margin-bottom: 24px;
-  font-weight: 500;
-  line-height: 1.2;
-}
 
-.journal-description {
-  color: #6b7280;
-  max-width: 544px !important;
-  margin: 0 auto 56px auto !important;
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
 
-.journal-button {
-  background-color: #82a496;
-  color: #ffffff;
-  padding: 16px 32px;
-  border-radius: 9999px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.75rem;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.journal-button:hover {
-  opacity: 0.9;
-}
 
 /* Impact Component */
 .impact-container {
@@ -338,66 +307,6 @@ p {
   font-family: 'Inter', sans-serif;
 }
 
-.impact-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 112px;
-  gap: 40px;
-}
-
-@media (min-width: 768px) {
-  .impact-header {
-    flex-direction: row;
-  }
-}
-
-.impact-title {
-  font-size: 3.25rem;
-  color: #2c3532;
-  font-weight: 400;
-  margin-top: 0;
-  line-height: 1.2;
-}
-
-@media (min-width: 768px) {
-  .impact-title {
-    width: 55%;
-    text-align: left;
-  }
-}
-
-.impact-title span {
-  color: #82a496;
-}
-
-.impact-description {
-  color: #6b7280;
-  max-width: 384px !important;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin: 0 !important;
-  padding-top: 12px;
-  text-align: left;
-}
-
-@media (min-width: 768px) {
-  .impact-description {
-    width: 40%;
-  }
-}
-
-.impact-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
-@media (min-width: 768px) {
-  .impact-stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 .stat-item {
   text-align: left;
@@ -427,191 +336,28 @@ p {
   font-family: 'Inter', sans-serif;
 }
 
-.contact-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-
-@media (min-width: 768px) {
-  .contact-layout {
-    flex-direction: row;
-  }
-}
-
-.contact-info {
-  text-align: left;
-}
-
-@media (min-width: 768px) {
-  .contact-info {
-    width: 50%;
-  }
-}
-
-.contact-title {
-  font-size: 4.5rem;
-  color: #2c3532;
-  font-weight: 400;
-  margin-bottom: 32px;
-  line-height: 1.05;
-  margin-top: 0;
-}
-
-.contact-title span {
-  color: #82a496;
-}
-
-.contact-description {
-  color: #6b7280;
-  max-width: 480px !important;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin: 0 0 56px 0 !important;
-  text-align: left;
-}
-
-.trust-section {
-  margin-top: 96px;
-}
-
-.trust-label {
-  color: #82a496;
-  font-size: 0.95rem;
-  margin: 0 0 16px 0 !important;
-  text-align: left;
-}
-
-.avatar-group {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.avatars {
-  display: flex;
-}
-
-.avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  background-color: #d1d5db;
-  border: 3px solid #ffffff;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  margin-right: -12px;
-}
-
-.avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.avatar-plus {
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  background-color: #2c3532;
-  border: 3px solid #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  position: relative;
-  z-index: 2;
-}
-
-.trustpoint-score {
-  color: #2c3532;
-  font-weight: 700;
-  text-align: left;
-  margin: 0 !important;
-  font-size: 0.875rem;
-  max-width: none !important;
-}
-
-.trustpoint-score span {
-  color: #00b67a;
-}
-
-.contact-form-side {}
-
-@media (min-width: 768px) {
-  .contact-form-side {
-    width: 50%;
-    padding-top: 16px;
-  }
-}
-
-.form-header {
-  font-size: 1.75rem;
-  color: #2c3532;
-  font-weight: 600;
-  margin-bottom: 40px;
-  text-align: left;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  text-align: left;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #d1d5db;
-  padding-bottom: 12px;
-  background-color: transparent;
-  color: #2c3532;
-  transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #82a496;
-}
-
-.form-group select {
-  appearance: none;
-  color: #6b7280;
-}
-
-.form-section-title {
-  font-size: 1.75rem;
-  color: #2c3532;
-  margin-top: 64px;
-  font-weight: 600;
-  margin-bottom: 32px;
-  text-align: left;
-}
-
-.form-group textarea {
-  resize: none;
-}
-
 /* Footer Component */
 .footer-container {
   width: 100%;
-  margin: 40px 0 0 0;
+  margin: 0;
+  /* ← was 40px — that was the white gap */
   padding: 0;
+  position: relative;
+  overflow: hidden;
+  /* clips parallax image so it doesn't spill */
+  min-height: 580px;
+  /* keeps container tall even though image is absolute */
 }
 
 .footer-image {
   width: 100%;
-  height: auto;
+  height: 120%;
+  /* taller than container so y-shift never shows edges */
   display: block;
+  position: absolute;
+  top: -10%;
+  /* start slightly above so both up & down shift look good */
+  left: 0;
   object-fit: cover;
 }
 

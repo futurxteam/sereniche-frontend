@@ -24,7 +24,7 @@ export default function Home() {
       <Navbar />
       <BackgroundController />
       <ParallaxController />
-
+<div className="home-content">
       <div className="scroll-container">
         <section id="hero">
           <Hero />
@@ -40,7 +40,7 @@ export default function Home() {
 
 
 
-        <div className="faq-bg">
+          <div className="faq-bg light-section">
           <section id="faq">
             <FAQ />
           </section>
@@ -52,7 +52,7 @@ export default function Home() {
           <section id="cta">
             <CTA />
           </section>
-        </div>
+          </div>
         <CurvedTopBox className="info-bg">
           <section id="info1">
             <Info1 />
@@ -70,6 +70,7 @@ export default function Home() {
           <Contact />
           <Footer />
         </div>
+      </div>
       </div>
     </div>
   );
