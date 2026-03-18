@@ -1,7 +1,9 @@
-.services-wrapper{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:32px;
+.services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+
+  margin-bottom: 250px; /* 🔥 ADD THIS */
 }
 
 /* CARD */
@@ -69,4 +71,4 @@
   text-decoration: none;
   display: inline-block;
 }
-
+

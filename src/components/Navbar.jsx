@@ -16,16 +16,15 @@ export default function Navbar() {
       return top < NAVBAR_H && bottom > 0;
     };
 
-    const check = () => {
-      // Return true if overlapping any element with .light-section class
-      // Also keeping .faq-bg as it's the main transparent-wrapper case
-      const isOverLight = 
-        overlapsNavbar(".light-section") || 
-        overlapsNavbar(".faq-bg") ||
-        overlapsNavbar(".white-footer-section");
+     const check = () => {
+  const isOverLight =
+    overlapsNavbar(".navbar-dark-zone") ||
+    overlapsNavbar(".light-section") ||
+    overlapsNavbar(".faq-bg") ||
+    overlapsNavbar(".white-footer-section");
 
-      setIsLight(isOverLight);
-    };
+  setIsLight(isOverLight);
+};
 
     window.addEventListener("scroll", check, { passive: true });
     check();
@@ -36,8 +35,11 @@ export default function Navbar() {
     <nav ref={navRef} className={`glass-navbar${isLight ? " dark" : ""}`}>
       <div className="nav-container">
 <Link className="nav-logo" to="/">
-  <img src="/Sereniche.png" alt="Sereniche" className="nav-logo-img" />
-</Link>        <ul className="nav-links">
+<img
+  src={isLight ? "/Sereniche academy-dark.png" : "/Sereniche academy-light.png"}
+  alt="Sereniche"
+  className="nav-logo-img"
+/></Link>        <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/stories">Stories</Link></li>

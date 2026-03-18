@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 import "../styles/navbar.css";
 import "../styles/insightpage.css";
 
+import ParallaxImage from "../components/animations/ParallaxImage";
+
 export default function InsightPage() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -21,9 +23,9 @@ export default function InsightPage() {
       <Navbar />
 
       {/* Hero banner */}
-      <div className="ip-hero" ref={ref}>
+      <div className="ip-hero navbar-dark-zone" ref={ref}>
         <motion.img 
-          src="/subpagehero/insights.jpg" 
+          src="/subpagehero/bg3.png" 
           className="ip-hero-bg" 
           style={{ y: imageY }}
         />
@@ -44,9 +46,13 @@ export default function InsightPage() {
         <div className="ip-grid">
           {insights.map((item) => (
             <div key={item.id} className="ip-card">
-              <div className="ip-card-img-wrap">
-                <img src={item.image} alt={item.title} />
-              </div>
+              <ParallaxImage 
+                src={item.image} 
+                alt={item.title} 
+                containerClass="ip-card-img-wrap"
+                className="ip-card-img"
+                amount={25}
+              />
               <div className="ip-card-body">
                 <div className="ip-card-meta">
                   <span className="ip-card-tag">{item.tag}</span>

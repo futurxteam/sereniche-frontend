@@ -224,12 +224,20 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.08);
 }
-.sd-other-card img {
+.sd-other-img-wrap {
   width: 100%;
   height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sd-other-card-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .sd-other-card-body { padding: 20px; }
 .sd-other-tag {
   font-size: 0.65rem;

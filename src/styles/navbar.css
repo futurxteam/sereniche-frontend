@@ -50,7 +50,10 @@
   /* smooth scaling */
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
+.nav-logo-img {
+  height: 162px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 /* Hover effect */
 .nav-logo:hover .nav-logo-img {
   transform: scale(1.05);

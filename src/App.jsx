@@ -6,6 +6,7 @@ import InsightPage from "./pages/InsightPage";
 import InsightDetailPage from "./pages/InsightDetailPage";
 import ContactPage from "./pages/ContactPage";
 import StoriesPage from "./pages/StoriesPage";
+import StoryDetailPage from "./pages/StoryDetailPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/insights/:id" element={<InsightDetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/stories" element={<StoriesPage />} />
+        <Route path="/stories/:id" element={<StoryDetailPage />} />
       </Routes>
     </BrowserRouter>
   );

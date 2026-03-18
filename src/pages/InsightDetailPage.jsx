@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import "../styles/navbar.css";
 import "../styles/insightdetail.css";
 
+import ParallaxImage from "../components/animations/ParallaxImage";
+
 export default function InsightDetailPage() {
   const { id } = useParams();
   const insight = insights.find((i) => i.id === id);
@@ -28,7 +30,12 @@ export default function InsightDetailPage() {
 
       {/* Hero */}
       <div className="id-hero">
-        <img src={insight.image} alt={insight.title} className="id-hero-img" />
+        <ParallaxImage 
+          src={insight.image} 
+          alt={insight.title} 
+          containerClass="id-hero-img" 
+          amount={70}
+        />
         <div className="id-hero-overlay" />
         <div className="id-hero-content">
           <Link to="/insights" className="id-back">← All Insights</Link>
@@ -61,9 +68,13 @@ export default function InsightDetailPage() {
               .filter((item) => item.id !== id)
               .map((item) => (
                 <Link to={`/insights/${item.id}`} key={item.id} className="id-other-card">
-                  <div className="id-other-img-wrap">
-                    <img src={item.image} alt={item.title} />
-                  </div>
+                  <ParallaxImage 
+                    src={item.image} 
+                    alt={item.title} 
+                    containerClass="id-other-img-wrap"
+                    className="id-other-card-img"
+                    amount={20}
+                  />
                   <div className="id-other-body">
                     <span className="id-other-tag">{item.tag}</span>
                     <h4>{item.title}</h4>

@@ -336,6 +336,18 @@ p {
   font-family: 'Inter', sans-serif;
 }
 
+.stats-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
 /* Footer Component */
 .footer-container {
   width: 100%;

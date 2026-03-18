@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import "../styles/navbar.css";
 import "../styles/servicedetail.css";
 
+import ParallaxImage from "../components/animations/ParallaxImage";
+
 export default function ServiceDetailPage() {
   const { id } = useParams();
   const service = services.find((s) => s.id === id);
@@ -28,7 +30,12 @@ export default function ServiceDetailPage() {
 
       {/* Hero */}
       <div className="sd-hero">
-        <img src={service.heroImage} alt={service.title} className="sd-hero-img" />
+        <ParallaxImage 
+          src={service.heroImage} 
+          alt={service.title} 
+          containerClass="sd-hero-img" 
+          amount={80}
+        />
         <div className="sd-hero-overlay" />
         <div className="sd-hero-content">
           <Link to="/services" className="sd-back">← All Services</Link>
@@ -100,7 +107,13 @@ export default function ServiceDetailPage() {
               .filter((s) => s.id !== id)
               .map((s) => (
                 <Link to={`/services/${s.id}`} key={s.id} className="sd-other-card">
-                  <img src={s.image} alt={s.title} />
+                  <ParallaxImage 
+                    src={s.image} 
+                    alt={s.title} 
+                    containerClass="sd-other-img-wrap"
+                    className="sd-other-card-img"
+                    amount={30}
+                  />
                   <div className="sd-other-card-body">
                     <span className="sd-other-tag">{s.tag}</span>
                     <h4>{s.title}</h4>
