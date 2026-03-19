@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { services } from "../data/services";
-import "./style/Services.css";
+import "./style/services.css";
 
 export default function Services() {
   const ref = useRef(null);
@@ -37,4 +37,4 @@ export default function Services() {
       ))}
     </div>
   );
-}
+}
