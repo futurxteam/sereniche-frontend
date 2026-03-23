@@ -26,3 +26,35 @@
   background:#a78bfa;
   transform:translateY(-2px);
 }
+
+/* ================================
+   MOBILE RESPONSIVE
+   ================================ */
+@media (max-width: 768px) {
+  .cta-block {
+    background: #ffffff;
+    padding: 60px 5%;
+    border-radius: 24px;
+    margin: 40px auto;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  }
+
+  .cta-block h2 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+  }
+
+  .cta-block p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 260px;
+    font-size: 1rem;
+    padding: 14px 0;
+  }
+}

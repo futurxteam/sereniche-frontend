@@ -59,9 +59,43 @@
   line-height: 1.12;
   margin-bottom: 18px;
   background: linear-gradient(135deg, #1a1a1a 55%, #3b3447);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ... existing styles ... */
+
+@media (max-width: 768px) {
+  .st-hero {
+    height: 70vh !important;
+    min-height: 400px !important;
+  }
+
+  .st-hero-bg {
+    transform: none !important;
+    height: 100% !important;
+    inset: 0 !important;
+  }
+
+  .st-hero-title {
+    font-size: 2.2rem !important;
+  }
+
+  .stories-list {
+    padding: 60px 8% !important;
+    gap: 80px !important;
+  }
+
+  .story-card__img-portrait {
+    transform: none !important;
+  }
+
+  .story-card__headline {
+    font-size: 1.8rem !important;
+  }
+}
+
 
 
 

@@ -15,8 +15,8 @@ export default function Footer() {
     <div className="footer-container" ref={ref}>
 
       {/* Background */}
-      <motion.img 
-        src="/footer.jpg" 
+      <motion.img
+        src="/footer.jpg"
         className="footer-image"
         style={{ y: imageY }}
       />

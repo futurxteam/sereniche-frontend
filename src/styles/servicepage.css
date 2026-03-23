@@ -54,9 +54,11 @@
   line-height: 1.12;
   margin-bottom: 18px;
   background: linear-gradient(135deg, #1a1a1a 55%, #3b3447);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 .sp-sub {
   font-size: 0.95rem;
@@ -69,3 +71,26 @@
   background: #fff;
   padding: 100px 8%;
 }
+
+/* --- MOBILE ONLY OVERRIDES --- */
+@media (max-width: 768px) {
+  .sp-hero {
+    height: 70vh !important;
+    min-height: 400px !important;
+  }
+
+  .sp-hero-bg {
+    transform: none !important;
+    height: 100% !important;
+    inset: 0 !important;
+  }
+
+  .sp-title {
+    font-size: 2.2rem !important;
+  }
+
+  .sp-section {
+    padding: 60px 5% !important;
+  }
+}
+

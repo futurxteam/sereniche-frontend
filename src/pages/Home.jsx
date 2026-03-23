@@ -24,53 +24,53 @@ export default function Home() {
       <Navbar />
       <BackgroundController />
       <ParallaxController />
-<div className="home-content">
-      <div className="scroll-container">
-        <section id="hero">
-          <Hero />
-        </section>
+      <div className="home-content">
+        <div className="scroll-container">
+          <section id="hero">
+            <Hero />
+          </section>
 
-        <section id="services">
-          <Services />
-        </section>
+          <section id="services">
+            <Services />
+          </section>
 
-        <section id="stats">
-          <Stats />
-        </section>
+          <section id="stats">
+            <Stats />
+          </section>
 
 
 
           <div className="faq-bg light-section">
-          <section id="faq">
-            <FAQ />
-          </section>
+            <section id="faq">
+              <FAQ />
+            </section>
 
-          <section id="faq2">
-            <FAQ2 />
-          </section>
+            <section id="faq2">
+              <FAQ2 />
+            </section>
 
-          <section id="cta">
-            <CTA />
-          </section>
+            <section id="cta">
+              <CTA />
+            </section>
           </div>
-        <CurvedTopBox className="info-bg">
-          <section id="info1">
-            <Info1 />
-          </section>
+          <CurvedTopBox className="info-bg">
+            <section id="info1">
+              <Info1 />
+            </section>
 
-          <section id="info2">
-            <Info2 />
-          </section>
-        </CurvedTopBox>
+            <section id="info2">
+              <Info2 />
+            </section>
+          </CurvedTopBox>
 
-        {/* The White Page Footer Section */}
-        <div className="white-footer-section">
-          <Journal />
-          <Impact />
-          <Contact />
-          <Footer />
+          {/* The White Page Footer Section */}
+          <div className="white-footer-section">
+            <Journal />
+            <Impact />
+            <Contact />
+            <Footer />
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

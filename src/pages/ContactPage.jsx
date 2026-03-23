@@ -21,9 +21,9 @@ export default function ContactPage() {
 
       {/* Hero banner */}
       <div className="cp-hero" ref={ref}>
-        <motion.img 
-          src="/bg4.jpg" 
-          className="cp-hero-bg" 
+        <motion.img
+          src="/bg4.jpg"
+          className="cp-hero-bg"
           style={{ y: imageY }}
         />
         <div className="cp-hero-content">

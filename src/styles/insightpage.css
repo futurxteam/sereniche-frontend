@@ -158,3 +158,35 @@
 }
 .ip-card-link:hover { color: #7c3aed; }
 
+/* --- MOBILE ONLY OVERRIDES --- */
+@media (max-width: 768px) {
+  .ip-hero {
+    height: 70vh !important;
+    min-height: 400px !important;
+  }
+
+  .ip-hero-bg {
+    transform: none !important;
+    height: 100% !important;
+    inset: 0 !important;
+  }
+
+  .ip-title {
+    font-size: 2.2rem !important;
+  }
+
+  .ip-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .ip-section {
+    padding: 60px 5% !important;
+  }
+
+  .ip-card-body {
+    padding: 24px !important;
+  }
+}
+
+

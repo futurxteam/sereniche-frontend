@@ -24,9 +24,9 @@ export default function InsightPage() {
 
       {/* Hero banner */}
       <div className="ip-hero navbar-dark-zone" ref={ref}>
-        <motion.img 
-          src="/subpagehero/bg3.png" 
-          className="ip-hero-bg" 
+        <motion.img
+          src="/subpagehero/bg3.png"
+          className="ip-hero-bg"
           style={{ y: imageY }}
         />
         <div className="ip-hero-content">
@@ -41,14 +41,14 @@ export default function InsightPage() {
         </div>
       </div>
 
-      {/* All insights listing */ }
+      {/* All insights listing */}
       <div className="ip-section light-section">
         <div className="ip-grid">
           {insights.map((item) => (
             <div key={item.id} className="ip-card">
-              <ParallaxImage 
-                src={item.image} 
-                alt={item.title} 
+              <ParallaxImage
+                src={item.image}
+                alt={item.title}
                 containerClass="ip-card-img-wrap"
                 className="ip-card-img"
                 amount={25}

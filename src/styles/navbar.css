@@ -169,3 +169,212 @@
   background: rgba(0, 0, 0, 0.12);
   transform: translateY(-1px);
 }
+/* Logo layering for mobile menu */
+.nav-logo {
+  z-index: 130 !important; /* Always on top */
+  position: relative;
+}
+
+.glass-navbar .nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 130; /* Align with logo */
+  position: relative;
+}
+
+.hamburger {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: white;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.glass-navbar.dark .hamburger {
+  background: #222;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: inherit;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hamburger::before { top: -9px; }
+.hamburger::after { top: 9px; }
+
+/* Open state for hamburger */
+.menu-open .hamburger {
+  background: transparent !important;
+}
+
+.menu-open .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+  background: white !important;
+}
+
+.menu-open .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+  background: white !important;
+}
+
+.glass-navbar.dark.menu-open .hamburger::before,
+.glass-navbar.dark.menu-open .hamburger::after {
+  background: #222 !important;
+}
+
+/* Desktop menu positioning */
+.nav-menu.desktop {
+  display: flex !important;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Mobile menu hidden on desktop by default */
+.nav-menu.mobile {
+  display: none;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+   ================================ */
+@media (max-width: 900px) {
+  /* Hide desktop version on mobile */
+  .nav-menu.desktop {
+    display: none !important;
+  }
+
+  /* Show mobile version */
+  .nav-menu.mobile {
+    display: flex !important;
+  }
+
+  .glass-navbar {
+    height: 80px;
+  }
+
+  .nav-logo-img {
+    height: 140px;
+  }
+
+  .nav-toggle {
+    display: block !important;
+  }
+
+  /* Updated Overlay */
+  .nav-menu.mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: rgba(18, 18, 22, 0.95) !important;
+    backdrop-filter: blur(25px) saturate(160%);
+    -webkit-backdrop-filter: blur(25px) saturate(160%);
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 120px 32px 80px 32px;
+    gap: 3.5rem;
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 120;
+    visibility: hidden;
+  }
+
+  .glass-navbar.dark .nav-menu.mobile {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .nav-menu.mobile.open {
+    transform: translateY(0) !important;
+    visibility: visible !important;
+  }
+
+  .nav-links {
+    display: flex !important; 
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2.5rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nav-links li {
+    list-style: none; /* Hide bullets */
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 1.8rem !important; /* Increase size */
+    color: white !important;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .glass-navbar.dark .nav-links a {
+    color: #222 !important;
+  }
+
+  .nav-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .login-btn {
+    padding: 14px 60px !important;
+    font-size: 1.1rem !important;
+    background: white !important;
+    color: black !important;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .glass-navbar.dark .login-btn {
+    background: #222 !important;
+    color: white !important;
+  }
+
+  .mobile-close-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    transition: all 0.2s;
+  }
+
+  .glass-navbar.dark .mobile-close-btn {
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #222;
+  }
+}
+
+
+
+
+

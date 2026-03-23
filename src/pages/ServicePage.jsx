@@ -21,9 +21,9 @@ export default function ServicePage() {
 
       {/* Hero banner */}
       <div className="sp-hero navbar-dark-zone" ref={ref}>
-        <motion.img 
-          src="/subpagehero/bg3.png" 
-          className="sp-hero-bg" 
+        <motion.img
+          src="/subpagehero/bg3.png"
+          className="sp-hero-bg"
           style={{ y: imageY }}
         />
         <div className="sp-hero-content">

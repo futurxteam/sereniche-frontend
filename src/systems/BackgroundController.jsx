@@ -1,8 +1,19 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function BackgroundController() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const { scrollYProgress } = useScroll();
+
+
 
   // background layers
   const heroOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
@@ -63,7 +74,10 @@ const onOpacity = useTransform(
 );
   
 
+  if (isMobile) return null;
+
   return (
+
     <div className="bg-system">
 
       <motion.div className="bg hero-bg" style={{ opacity: heroOpacity }} />

@@ -377,3 +377,209 @@ p {
   min-height: auto;
   padding: 80px 8%;
 }
+
+/* --- MOBILE ONLY OVERRIDES --- */
+@media (max-width: 768px) {
+
+  /* Hide fixed background system and parallax */
+  .bg-system,
+  .parallax-bg,
+  .balance-switch,
+  .balance-overlay {
+    display: none !important;
+  }
+
+  /* Simple Scroll: allow sections to scroll naturally */
+  .home-content,
+  .scroll-container {
+    overflow-x: hidden;
+  }
+
+  section {
+    min-height: auto !important;
+    padding: 80px 5% !important;
+    display: block !important;
+  }
+
+  section#faq {
+    min-height: auto !important;
+  }
+
+  /* White background for all core sections on mobile */
+  #services,
+  #stats,
+  .faq-bg,
+  #faq,
+  #faq2,
+  #cta {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+  }
+
+  .faq-bg {
+    background-image: none !important;
+    /* Remove dark gradient image */
+  }
+
+  /* Specific section resets */
+  #hero {
+    min-height: 100vh !important;
+    height: auto !important;
+    background: linear-gradient(to bottom right, rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.7)), url("/hero.png");
+    background-size: cover;
+    background-position: 35% center;
+    /* Shift subject to the right */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 120px 8% 60px 8% !important;
+  }
+
+  .hero-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  #hero h1 {
+    font-size: 3.5rem !important;
+    margin-bottom: 20px !important;
+    color: white !important;
+    line-height: 1 !important;
+  }
+
+  #hero p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 30px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-button {
+    background: #a967bc !important;
+    /* Teal as per screenshot */
+    padding: 16px 40px !important;
+    font-size: 0.9rem !important;
+    border-radius: 30px !important;
+    width: auto !important;
+    min-width: 240px;
+  }
+
+
+  /* Force Hero text to white */
+  #hero h1,
+  #hero p {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .faq-bg {
+    background: #ffffff !important;
+    background-image: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .faq-bg::after {
+    display: none !important;
+  }
+
+  #faq,
+  #faq2 {
+    background: #ffffff !important;
+    padding: 40px 8% !important;
+  }
+
+
+
+  .info-bg {
+    background-image: url("/bg4.jpg") !important;
+    /* Simple image bg */
+    background-attachment: scroll !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    margin: 0 !important;
+    padding: 100px 5% !important;
+    border-radius: 0 !important;
+  }
+
+  /* Remove internal background divs on mobile to avoid doubling */
+  .info-section .info-bg {
+    display: none !important;
+  }
+
+  #info1,
+  #info2 {
+    background: transparent !important;
+  }
+
+
+
+  #services {
+    padding-top: 40px !important;
+  }
+
+  #stats {
+    padding: 60px 5% !important;
+  }
+
+  /* Font size and color adjustments for mobile */
+  h1 {
+    font-size: 2.8rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 2.2rem !important;
+    color: #1a1a1a !important;
+  }
+
+  p {
+    font-size: 1.1rem !important;
+    max-width: 100% !important;
+    color: #555 !important;
+  }
+
+  #faq2 {
+    margin-bottom: 0 !important;
+    padding-top: 20px !important;
+  }
+
+  #cta {
+    padding: 100px 5% !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    z-index: 10;
+  }
+
+
+  .white-footer-section {
+    padding-top: 0 !important;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem !important;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  section {
+    padding: 60px 4% !important;
+  }
+}

@@ -14,21 +14,19 @@ export default function Hero() {
           </h1>
         </div>
       </FadeIn>
+      <div className="hero-right">
+        <p className="hero-description">
+          We offer therapy and coaching to help you navigate life's
+          challenges with confidence and care. Together, we'll build
+          personal insight, emotional well-being, and the steps
+          needed for lasting change — at your own pace.
+        </p>
 
-      <FadeIn delay={0.3}>
-        <div className="hero-right">
-          <p className="hero-description">
-            We offer therapy and coaching to help you navigate life's
-            challenges with confidence and clarity.
-          </p>
+        <button className="hero-button">
+          START YOUR JOURNEY
+        </button>
+      </div>
 
-          <FadeIn delay={0.6}>
-            <button className="hero-button">
-              START YOUR JOURNEY
-            </button>
-          </FadeIn>
-        </div>
-      </FadeIn>
 
     </div>
   );

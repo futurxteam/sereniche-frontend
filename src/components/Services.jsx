@@ -7,7 +7,9 @@ import "./style/services.css";
 export default function Services() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const imageY = useTransform(scrollYProgress, [0, 1], [-120, 120]);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const imageY = useTransform(scrollYProgress, [0, 1], isMobile ? [-40, 40] : [-120, 120]);
+
 
   return (
     <div className="services-wrapper" ref={ref}>
