@@ -5,19 +5,24 @@ import "./style/stats.css";
 const steps = [
   {
     number: "01",
-    title: "Reach Out",
-    text: "Start with a short introductory call. We'll talk through what brings you here and how we might support you."
+    title: "Connect With Us",
+    text: "The journey begins when you connect with us for support, followed by an intake session to understand your concerns, background, and current challenges — at a pace that feels right for you.",
   },
   {
     number: "02",
-    title: "Initial Conversation",
-    text: "We'll explore your goals and understand your needs in a calm and open environment."
+    title: "Initial Assessment",
+    text: "A structured initial session to understand your concerns, background history, and current challenges, giving our team a clear picture of where you are and what you need.",
   },
   {
     number: "03",
-    title: "Start Your Journey",
-    text: "Together we'll create a plan that supports your growth and personal wellbeing."
-  }
+    title: "Your Care Plan",
+    text: "A tailored treatment plan is curated just for you — combining therapy, medication, or both — designed to support your recovery and long-term wellbeing with evidence-based care.",
+  },
+  {
+    number: "04",
+    title: "Walk Together",
+    text: "Ready to create your space? Whether you're here for a short chapter or a longer journey, we'll walk it together — adapting your care as you grow and heal.",
+  },
 ];
 
 export default function Stats(){
@@ -57,6 +62,18 @@ export default function Stats(){
 
         </AnimatePresence>
 
+        {/* Step dot indicators */}
+        <div className="stats-dots">
+          {steps.map((_, i) => (
+            <button
+              key={i}
+              className={`stats-dot ${i === index ? "active" : ""}`}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to step ${i + 1}`}
+            />
+          ))}
+        </div>
+
       </div>
 
       {/* NUMBER LEFT */}
@@ -81,4 +98,4 @@ export default function Stats(){
 
     </section>
   );
-}
+}

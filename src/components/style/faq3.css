@@ -1,0 +1,151 @@
+.faq3-section {
+  padding: 120px 5%;
+  background: white;
+  color: #1a1a1a;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.faq3-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+}
+
+/* LEFT SIDE */
+.faq3-left {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.faq3-headline {
+  font-size: clamp(2.5rem, 4vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px 0;
+  color: #1a1a1a;
+}
+
+.faq3-highlight {
+  color: #a067bc;
+}
+
+.faq3-subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.faq3-left-bottom {
+  margin-top: 15vw;
+}
+
+.faq3-fallback {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0 0 24px 0;
+}
+
+.faq3-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #6b5b7b;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.faq3-btn:hover {
+  background: #a067bc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(160, 103, 188, 0.35);
+}
+
+.faq3-btn-dot {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+
+/* RIGHT SIDE (Accordion) */
+.faq3-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq3-item {
+  background: #fafaf9;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: background 0.2s ease;
+}
+
+.faq3-item:hover {
+  background: #f4f4f2;
+}
+
+.faq3-q {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 24px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq3-a-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.faq3-a-inner {
+  overflow: hidden;
+}
+
+.faq3-item.open .faq3-a-wrap {
+  grid-template-rows: 1fr;
+}
+
+.faq3-a {
+  margin: 0;
+  padding: 0 24px 24px 24px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .faq3-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .faq3-left {
+    flex: auto;
+  }
+  .faq3-left-bottom {
+    margin-top: 40px;
+  }
+}

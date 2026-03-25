@@ -129,9 +129,7 @@ return (
           </h1>
 
           <p>
-            You're closer than you think.
-            <br />
-            And every step you take makes it clearer.
+             every step you take makes it clearer.
           </p>
         </motion.div>
 
@@ -149,8 +147,8 @@ return (
           </h1>
 
           <p>
-            Every path is different. These are the ways
-            we help people move forward with confidence.
+         You don't have to have it all figured out,you just have to take the next step.
+
           </p>
         </motion.div>
 

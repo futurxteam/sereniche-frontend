@@ -15,11 +15,12 @@ export default function Journal() {
         <p className="journal-label">OUR JOURNAL</p>
 
         <h2 className="journal-title">
-          Insights for Growth, Healing<br />and Clarity.
+          Insights for knowledge growth and clarity 
+
         </h2>
 
         <p className="journal-description">
-          We share reflections, tools, and gentle prompts to support personal growth — one step at a time.
+We share reflections, tools, and gentle prompts to support personal growth — one step at a time.
         </p>
 
         <button className="journal-button">BROWSE INSIGHTS</button>

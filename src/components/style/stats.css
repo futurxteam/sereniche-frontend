@@ -1,52 +1,77 @@
-.stats-section{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  min-height:90vh;
-  position:relative;
-  padding:0 8%;
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  position: relative;
+  padding: 0 8%;
 }
 
 /* NUMBER */
 
-.stats-right{
-  position:absolute;
-  left:0;
-  top:50%;
-  transform:translateY(-50%);
+.stats-right {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.stats-number{
-  font-family:"Inter",sans-serif;
-  font-size:22rem;
-  font-weight:700;
-  color:#ffffff;
-  opacity:.9;
-  line-height:1;
-  letter-spacing:-8px;
+.stats-number {
+  font-family: "Inter", sans-serif;
+  font-size: 22rem;
+  font-weight: 700;
+  color: #ffffff;
+  opacity: .9;
+  line-height: 1;
+  letter-spacing: -8px;
 }
 
 /* TEXT */
 
-.stats-left{
-  max-width:520px;
-  margin-left:auto;
+.stats-left {
+  max-width: 520px;
+  margin-left: auto;
 }
 
-.stats-left h2{
-  font-family:"Playfair Display",serif;
-  font-size:4rem;
-  color:#ffffff;
-  margin-bottom:24px;
-  line-height:1.1;
+.stats-left h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.1;
 }
 
-.stats-left p{
-  font-family:"Inter",sans-serif;
-  font-size:1.15rem;
-  color:#ffffff;
-  opacity:.85;
-  line-height:1.7;
+.stats-left p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
+  color: #ffffff;
+  opacity: .85;
+  line-height: 1.7;
+}
+
+/* Step dot indicators */
+.stats-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 102px;
+}
+
+.stats-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.stats-dot.active {
+  background: #a067bc;
+  transform: scale(1.35);
+  width: 24px;
+  border-radius: 4px;
 }
 
 /* ================================
@@ -54,7 +79,8 @@
    ================================ */
 @media (max-width: 900px) {
   .stats-section {
-    flex-direction: column !important; /* Stack normally */
+    flex-direction: column !important;
+    /* Stack normally */
     justify-content: center !important;
     min-height: 80vh !important;
     padding: 60px 8% !important;
@@ -74,11 +100,14 @@
   }
 
   .stats-number {
-    font-size: 10rem !important; /* Smaller but centered */
+    font-size: 10rem !important;
+    /* Smaller but centered */
     letter-spacing: -6px !important;
-    opacity: 0.1 !important; /* Higher contrast if needed but still background */
+    opacity: 0.1 !important;
+    /* Higher contrast if needed but still background */
     line-height: 0.8 !important;
-    color: #000 !important; /* Dark number on white bg */
+    color: #000 !important;
+    /* Dark number on white bg */
   }
 
   /* Centered text below number */
@@ -103,5 +132,3 @@
     color: #444 !important;
   }
 }
-
-

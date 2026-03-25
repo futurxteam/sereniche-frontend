@@ -75,8 +75,7 @@ export default function BalanceSection() {
         </h1>
 
         <p>
-          You're closer than you think.<br />
-          And every step you take makes it clearer.
+        every step you take makes it clearer.
         </p>
 
       </motion.div>

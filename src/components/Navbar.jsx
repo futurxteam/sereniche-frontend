@@ -55,6 +55,7 @@ export default function Navbar() {
           <div className="nav-menu desktop">
             <ul className="nav-links">
               <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/stories">Stories</Link></li>
               <li><Link to="/insights">Insights</Link></li>
@@ -79,6 +80,7 @@ export default function Navbar() {
       <div className={`nav-menu mobile ${isOpen ? "open" : ""}`}>
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/stories">Stories</Link></li>
           <li><Link to="/insights">Insights</Link></li>

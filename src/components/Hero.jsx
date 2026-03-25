@@ -10,49 +10,40 @@ export default function Hero() {
   const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.88]);
 
   // Move up
-  const y = useTransform(scrollYProgress, [0, 0.25], [0, -60]);
-
-  // Tilt (rotate) — the "karangi pokanam" lean
-  const rotate = useTransform(scrollYProgress, [0, 0.20], [0, -3]);
+  const yScroll = useTransform(scrollYProgress, [0, 0.25], [0, -60]);
 
   // Fade out hero content as scroll progresses
-  const opacity = useTransform(scrollYProgress, [0, 0.10, 0.22], [1, 0.9, 0]);
-
-  // Left side tilts a bit more dramatically
-  const rotateLeft = useTransform(scrollYProgress, [0, 0.20], [0, -5]);
-  const xLeft = useTransform(scrollYProgress, [0, 0.25], [0, -40]);
-
-  // Right side slides and fades slightly later
-  const xRight = useTransform(scrollYProgress, [0, 0.25], [0, 30]);
-  const opacityRight = useTransform(scrollYProgress, [0, 0.08, 0.20], [1, 1, 0]);
+  const opacityScroll = useTransform(scrollYProgress, [0, 0.10, 0.22], [1, 0.9, 0]);
 
   return (
     <motion.div
       className="hero-container"
-      style={{ scale, y, rotate, opacity }}
+      style={{ scale, y: yScroll, opacity: opacityScroll }}
     >
-      {/* LEFT — Title */}
+      {/* LEFT — Title (Entry animation reveals from down) */}
       <motion.div
         className="hero-left"
-        style={{ x: xLeft, rotate: rotateLeft }}
+        initial={{ y: 80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
       >
         <h1 className="hero-title">
-          A Path <br />
-          That Shapes <br />
-          Your Future.
+          A safe
+          <br />
+          NICHE for   <br />
+          your mind
         </h1>
       </motion.div>
 
-      {/* RIGHT — Description + Button */}
+      {/* RIGHT — Description + Button (Entry animation reveals from down with slight delay) */}
       <motion.div
         className="hero-right"
-        style={{ x: xRight, opacity: opacityRight }}
+        initial={{ y: 80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
       >
         <p className="hero-description">
-          We offer therapy and coaching to help you navigate life's
-          challenges with confidence and care. Together, we'll build
-          personal insight, emotional well-being, and the steps
-          needed for lasting change — at your own pace.
+          personalized and confidential space where you can speak freely, reflect deeply, and feel emotionally secure.
         </p>
 
         <button className="hero-button">

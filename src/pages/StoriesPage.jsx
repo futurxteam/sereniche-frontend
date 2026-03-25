@@ -69,15 +69,22 @@ function StoriesHero() {
       />
       <div className="st-hero-overlay" />
       <div className="st-hero-content">
-        <p className="st-hero-label">REAL PEOPLE · REAL CHANGE</p>
-        <h1 className="st-hero-title">
-          Stories of<br />transformation.
-        </h1>
-        <p className="st-hero-sub">
-          Every journey through therapy is unique. These are a few of the
-          stories — shared with permission — that remind us why this work
-          matters.
-        </p>
+        <div className="st-hero-top">
+          <h1 className="st-hero-title" style={{textTransform:'lowercase'}}>
+            Stories of<br />transformation.
+          </h1>
+          <p className="st-hero-micro">
+            REAL PEOPLE · REAL CHANGE
+          </p>
+        </div>
+        
+        <div className="st-hero-statement">
+          <p>
+            Every journey through therapy is unique. These are a few of the
+            stories — shared with permission — that remind us why this work
+            matters.
+          </p>
+        </div>
       </div>
     </div>
   );

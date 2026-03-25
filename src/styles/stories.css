@@ -7,69 +7,102 @@
 /* ══════════════════════════════════════
    HERO
 ══════════════════════════════════════ */
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
 .st-hero {
   position: relative;
-  height: 88vh;
-  overflow: hidden;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  padding: 120px 8% 80px 8%;
+  background: transparent;
+  overflow: hidden;
 }
 
 .st-hero-bg {
   position: absolute;
-  inset: -10% 0;
+  top: -10%;
+  left: 0;
   width: 100%;
   height: 120%;
   object-fit: cover;
-  object-position: center 30%;
 }
 
 .st-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
+  display: none;
 }
 
 .st-hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  color: #1a1a1a;
-  padding: 0 24px;
-  max-width: 820px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  padding: 0;
+  max-width: none;
 }
 
-.st-hero-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.28em;
-  opacity: 0.65;
-  margin-bottom: 24px;
-  color: #1a1a1a !important;
-  max-width: none !important;
+.st-hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
 }
 
-.st-hero-title {  font-size: clamp(2.4rem, 4.5vw, 3.2rem);
+.st-hero-title {
   font-family: "Playfair Display", serif;
-  font-weight: 600;
-  line-height: 1.12;
-  margin-bottom: 18px;
-  background: linear-gradient(135deg, #1a1a1a 55%, #3b3447);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+  background: none;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: rgb(4, 4, 4);
 }
 
-/* ... existing styles ... */
+.st-hero-micro {
+  max-width: 300px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  color: #000000;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0 0 10px 0;
+}
+
+.st-hero-statement {
+  max-width: 800px;
+  margin: 60px 0 0 0;
+  padding: 0;
+  text-align: left;
+}
+
+.st-hero-statement p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #000000;
+  margin: 0;
+}
+
+/* --- MOBILE ONLY OVERRIDES --- */
+@media (max-width: 900px) {
+  .st-hero-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .st-hero-title {
+    font-size: 3.5rem;
+  }
+}
 
 @media (max-width: 768px) {
   .st-hero {
-    height: 70vh !important;
-    min-height: 400px !important;
+    min-height: 70vh !important;
   }
 
   .st-hero-bg {
@@ -79,7 +112,7 @@
   }
 
   .st-hero-title {
-    font-size: 2.2rem !important;
+    font-size: 3rem !important;
   }
 
   .stories-list {

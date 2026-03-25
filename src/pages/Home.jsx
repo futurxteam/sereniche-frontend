@@ -5,6 +5,7 @@ import Services from "../components/Services";
 import Stats from "../components/Stats";
 import Info1 from "../components/Info1";
 import Info2 from "../components/Info2";
+import Philosophy from "../components/Philosophy";
 import FAQ from "../components/FAQ";
 import FAQ2 from "../components/FAQ2";
 import CTA from "../components/CTA";
@@ -15,6 +16,8 @@ import Journal from "../components/Journal";
 import Impact from "../components/Impact";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import UserStats from "../components/UserStats";
+import FAQ3 from "../components/FAQ3";
 import "../styles/home.css";
 import "../styles/navbar.css";
 
@@ -25,7 +28,7 @@ export default function Home() {
       <Navbar />
       <BackgroundController />
       <ParallaxController />
-      
+
       {/* 🌟 New line that sits strictly on top of the DOM stacking context */}
       <ScrollLine />
 
@@ -38,6 +41,17 @@ export default function Home() {
 
           <section id="services">
             <Services />
+          </section>
+
+          {/* How It Works intro header */}
+          <section id="how-it-works">
+            <div className="how-it-works-intro">
+              <p className="how-label">HOW IT WORKS</p>
+              <h2 className="how-heading">Getting started doesn't have to be complicated.</h2>
+              <p className="how-sub">
+                Our process is simple, supportive, and designed to move at a pace that feels right for you — from the first hello to the progress you'll see over time.
+              </p>
+            </div>
           </section>
 
           <section id="stats">
@@ -71,8 +85,12 @@ export default function Home() {
 
           {/* The White Page Footer Section */}
           <div className="white-footer-section">
+            {/* Philosophy — inside white layer so fixed overlays don't bleed through */}
+            <Philosophy />
             <Journal />
             <Impact />
+            <UserStats />
+            <FAQ3 />
             <Contact />
             <Footer />
           </div>

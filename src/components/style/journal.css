@@ -13,7 +13,8 @@
 
 .journal-icon-box {
   margin-bottom: 20px;
-  margin-right: 45px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .journal-label {
@@ -22,7 +23,9 @@
   color: #b583e6 !important;       /* brighter, more vivid lavender-purple */
   margin-bottom: 16px !important;
   text-transform: uppercase;
-  font-weight: 700;                /* optional: makes label stand out more */
+  font-weight: 700;         
+  margin-left: auto;
+  margin-right: auto;       /* optional: makes label stand out more */
 }
 
 .journal-title {
