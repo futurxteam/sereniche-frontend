@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-
 export default function BackgroundController() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -76,15 +75,13 @@ const onOpacity = useTransform(
 
   if (isMobile) return null;
 
-  return (
+return (
+  <div className="bg-system">
 
-    <div className="bg-system">
-
-      <motion.div className="bg hero-bg" style={{ opacity: heroOpacity }} />
-      <motion.div className="bg services-bg" style={{ opacity: servicesOpacity }} />
-      <motion.div className="bg stats-bg" style={{ opacity: statsOpacity }} />
-      <motion.div className="bg faq-bg-main" style={{ opacity: faqOpacity }} />
-
+    <motion.div className="bg hero-bg" style={{ opacity: heroOpacity }} />
+    <motion.div className="bg services-bg" style={{ opacity: servicesOpacity }} />
+    <motion.div className="bg stats-bg" style={{ opacity: statsOpacity }} />
+    <motion.div className="bg faq-bg-main" style={{ opacity: faqOpacity }} />
       {/* SWITCH + TEXT OVERLAY */}
       <motion.div
         className="balance-overlay"

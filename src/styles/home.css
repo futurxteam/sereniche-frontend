@@ -105,6 +105,7 @@
 
 .balance-text.on h1 {
   background: none;
+  background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: #000;
   color: #000;
@@ -121,6 +122,7 @@
   margin: 0 auto;
   line-height: 1.6;
 }
+
 
 /* ON state */
 .balance-text.on {
@@ -245,6 +247,53 @@ section#faq {
   min-height: 150vh;
 }
 
+
+/* PATH LAYER — legacy, kept for safety */
+.path-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* SCROLL LINE LAYER — continuous path, top-level absolute spanning the full document */
+.scroll-line-layer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scroll-line-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Bloom glow at the origin point of the line (near hero focal point) */
+.scroll-line-bloom {
+  position: absolute;
+  /* Right side, ~38% down — near hero image focal area */
+  top: 34%;
+  left: 66%;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(200, 180, 255, 0.45) 0%,
+    rgba(167, 139, 250, 0.15) 50%,
+    transparent 70%
+  );
+  filter: blur(24px);
+  pointer-events: none;
+}
 /* Content aesthetics for the demo */
 h1 {
   font-size: 5rem;
@@ -405,6 +454,8 @@ p {
     min-height: auto !important;
   }
 
+
+  
   /* White background for all core sections on mobile */
   #services,
   #stats,
@@ -582,4 +633,15 @@ p {
   section {
     padding: 60px 4% !important;
   }
+}
+
+
+
+.home {
+  position: relative;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
 }

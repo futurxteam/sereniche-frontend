@@ -11,6 +11,7 @@
 
 .service-card {
   position: relative;
+  z-index: 5;
   height: 520px;
   overflow: hidden;
 }

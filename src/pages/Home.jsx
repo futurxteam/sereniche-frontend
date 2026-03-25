@@ -9,23 +9,29 @@ import FAQ from "../components/FAQ";
 import FAQ2 from "../components/FAQ2";
 import CTA from "../components/CTA";
 import Navbar from "../components/Navbar";
+import ScrollLine from "../components/ScrollLine";
 import CurvedTopBox from "../components/CurvedTopBox";
 import Journal from "../components/Journal";
 import Impact from "../components/Impact";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-
 import "../styles/home.css";
 import "../styles/navbar.css";
 
 export default function Home() {
   return (
     <div className="home">
+
       <Navbar />
       <BackgroundController />
       <ParallaxController />
+      
+      {/* 🌟 New line that sits strictly on top of the DOM stacking context */}
+      <ScrollLine />
+
       <div className="home-content">
         <div className="scroll-container">
+
           <section id="hero">
             <Hero />
           </section>
