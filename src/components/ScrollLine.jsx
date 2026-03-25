@@ -22,7 +22,7 @@ export default function ScrollLine() {
   // Non-linear scroll mapping — Accelerates drawing exclusively during the loop part!
   // At exactly 10% scroll, we force 20% of the actual SVG path length (getTotalLength) to be fully drawn.
   // This violently solves the "cut off midway" issue, ensuring the entire circle completes before cards arrive.
-  const pathLength = useTransform(smoothProgress, [0, 0.10, 1], [0, 0.30, 1]);
+  const pathLength = useTransform(smoothProgress, [0, 0.02, 0.10, 0.50, 1], [0, 0.10, 0.30, 0.80, 1]);
 
   // The glowing line NEVER fades out. It remains fully visible through the journey.
   const opacity = useTransform(smoothProgress, [0, 0.02], [0, 1]);
@@ -73,7 +73,7 @@ export default function ScrollLine() {
             C 340 3500 720 3800 720 4500
             C 720 5200 1100 5500 1100 6000
             C 1100 6800 340 7200 340 7800
-          C 340 8800 900 9200 900 9800
+            C 340 8800 900 9200 900 9800
           "
           stroke="url(#lineGrad)"
           strokeWidth="2.5"

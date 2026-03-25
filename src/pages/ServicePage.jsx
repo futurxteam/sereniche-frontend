@@ -59,14 +59,14 @@ export default function ServicePage() {
         />
         <div className="sp-hero-content">
           <div className="sp-hero-top">
-            <h1 className="sp-title" style={{textTransform:'lowercase'}}>
+            <h1 className="sp-title" style={{ textTransform: 'lowercase' }}>
               Sereniche -<br />your safe space
             </h1>
             <p className="sp-micro">
               Explore our therapy and coaching options tailored to your goals, pace, and needs.
             </p>
           </div>
-          
+
           <div className="sp-statement">
             <p>
               Sereniche is a multidisciplinary mental health centre offering psychiatry, psychology, geriatric mental health services, professional training, and corporate wellness programs. We are committed to compassionate care, clinical excellence, and holistic emotional well-being. Through Sereniche Academy, we extend our work into education and professional development — fostering a trusted space for learning, growth, and lasting impact.

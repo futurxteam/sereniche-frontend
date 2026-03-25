@@ -175,9 +175,11 @@
     align-items: flex-start;
     gap: 20px;
   }
+
   .sp-title {
     font-size: 3.5rem;
   }
+
   .wide-service-card {
     min-height: 85vh;
     padding: 80px 5%;
