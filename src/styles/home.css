@@ -499,12 +499,30 @@ p {
   /* White background for all core sections on mobile */
   #services,
   #stats,
+  #how-it-works,
   .faq-bg,
   #faq,
   #faq2,
   #cta {
     background: #ffffff !important;
     color: #1a1a1a !important;
+  }
+
+  /* Specific section resets for How It Works on mobile */
+  #how-it-works {
+    background: #fafafa !important;
+  }
+
+  #how-it-works .how-label {
+    color: #a067bc !important;
+  }
+
+  #how-it-works .how-heading {
+    color: #1a1a1a !important;
+  }
+
+  #how-it-works .how-sub {
+    color: #555 !important;
   }
 
   .faq-bg {

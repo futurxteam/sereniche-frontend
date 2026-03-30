@@ -60,6 +60,7 @@
   background: #ffffff;
   color: #1a1a1a;
   padding: 100px 0 140px 0;
+  overflow-x: hidden;
 }
 
 /* Statement */
@@ -168,14 +169,16 @@
   flex: 1;
   position: relative;
   min-height: 500px;
+  overflow: hidden; /* Contain the parallax bleed */
+  border-radius: 16px;
 }
 
 .founder-card__img-bg {
   position: absolute;
-  top: 0;
-  right: -35%;
-  bottom: 0;
-  left: 45%;
+  top: -10%;
+  right: -5%;
+  bottom: -10%;
+  left: 35%;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -191,13 +194,14 @@
 
 .founder-card__img-portrait {
   position: absolute;
-  top: 10%;
-  bottom: 10%;
-  left: 0;
-  right: 20%;
+  top: -15%; /* Bleed for parallax slide */
+  bottom: -15%;
+  left: -5%;
+  right: 15%;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 
 .founder-card__img-portrait img {
@@ -292,13 +296,28 @@
     flex-direction: column;
   }
 
+  .ap-team-grid {
+    flex-direction: column;
+  }
+
   .founder-card__images {
-    min-height: 400px;
+    min-height: 320px;
     margin-top: 40px;
   }
 
-  .ap-team-grid {
-    flex-direction: column;
+  /* Reset positioning for mobile to keep images on screen */
+  .founder-card__img-bg {
+    left: 30%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .founder-card__img-portrait {
+    left: 0;
+    right: 30%;
+    top: 10%;
+    bottom: 10%;
   }
 
   .ap-team-card.offset {

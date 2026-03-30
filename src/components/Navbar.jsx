@@ -90,8 +90,8 @@ export default function Navbar() {
         <div className="nav-actions">
           <button className="login-btn">Login</button>
           {/* Explicit close for mobile */}
-          <button 
-            className="mobile-close-btn" 
+          <button
+            className="mobile-close-btn"
             onClick={() => setIsOpen(false)}
           >
             Close Menu
