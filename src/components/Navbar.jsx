@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation,useNavigate } from "react-router-dom";
 export default function Navbar() {
   const [isLight, setIsLight] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const NAVBAR_H = 90;
@@ -62,8 +63,14 @@ export default function Navbar() {
               <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className="nav-actions">
-              <button className="login-btn">Login</button>
-            </div>
+ <button
+      className="login-btn"
+onClick={() => {
+  window.location.href =
+    "http://localhost:4000/facility/af391f25-96f5-4364-876d-99c393530802";
+}}    >
+      Book a Session
+    </button>               </div>
           </div>
 
           <button
@@ -88,8 +95,13 @@ export default function Navbar() {
         </ul>
 
         <div className="nav-actions">
-          <button className="login-btn">Login</button>
-          {/* Explicit close for mobile */}
+
+ <button
+      className="login-btn"
+      onClick={() => navigate("/facility/af391f25-96f5-4364-876d-99c393530802")}
+    >
+      Book a Session
+    </button>          {/* Explicit close for mobile */}
           <button
             className="mobile-close-btn"
             onClick={() => setIsOpen(false)}
