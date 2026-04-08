@@ -89,9 +89,9 @@ export default function Philosophy() {
       {/* Button */}
       <button
         className="phil-btn"
-        onClick={() => navigate("/about")}
+        onClick={() => window.location.href = "http://localhost:4000/facility/af391f25-96f5-4364-876d-99c393530802"}
       >
-        ABOUT SERENICHE <span className="phil-btn-dot">•</span>
+        BOOK SESSION <span className="phil-btn-dot">•</span>
       </button>
     </section>
   );

@@ -67,10 +67,12 @@
   .user-stats-header {
     flex-direction: column;
   }
+
   .us-subtext {
     flex: auto;
     max-width: 100%;
   }
+
   .us-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -82,9 +84,11 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .us-headline {
     font-size: 2rem;
   }
+
   .us-number {
     font-size: 3.5rem;
   }

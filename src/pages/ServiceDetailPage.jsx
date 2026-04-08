@@ -94,7 +94,12 @@ export default function ServiceDetailPage() {
 
             <div className="sd-cta-card">
               <p>Ready to take the first step?</p>
-              <Link to="/contact" className="sd-cta-btn">Book a Session</Link>
+              <a 
+                href="http://localhost:4000/facility/af391f25-96f5-4364-876d-99c393530802" 
+                className="sd-cta-btn"
+              >
+                Book a Session
+              </a>
             </div>
           </div>
         </div>

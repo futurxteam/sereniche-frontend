@@ -55,9 +55,12 @@ export default function FAQ3() {
             <p className="faq3-fallback">
               Didn't find your answer? Send us a message — we'll respond with care and clarity.
             </p>
-            <Link to="/about" className="faq3-btn">
-              ABOUT SERENICHE <span className="faq3-btn-dot">•</span>
-            </Link>
+            <button 
+              className="faq3-btn"
+              onClick={() => window.location.href = "http://localhost:4000/facility/af391f25-96f5-4364-876d-99c393530802"}
+            >
+              BOOK SESSION <span className="faq3-btn-dot">•</span>
+            </button>
           </div>
         </div>
 

@@ -46,8 +46,11 @@ export default function Hero() {
           personalized and confidential space where you can speak freely, reflect deeply, and feel emotionally secure.
         </p>
 
-        <button className="hero-button">
-          START YOUR JOURNEY
+        <button 
+          className="hero-button"
+          onClick={() => window.location.href = "http://localhost:4000/facility/af391f25-96f5-4364-876d-99c393530802"}
+        >
+          BOOK SESSION
         </button>
       </motion.div>
     </motion.div>

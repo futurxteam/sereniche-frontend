@@ -18,13 +18,13 @@ export default function BackgroundController() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
   const servicesOpacity = useTransform(scrollYProgress, [0.05, 0.15], [0, 1]);
   const statsOpacity = useTransform(scrollYProgress, [0.18, 0.28], [0, 1]);
-  const faqOpacity = useTransform(scrollYProgress, [0.32, 0.42], [0, 1]);
+  const faqOpacity = useTransform(scrollYProgress, [0.24, 0.34], [0, 1]);
 
   // switch visibility (FAQ → FAQ2)
   // Whole overlay fades out earlier so CTA content never overlaps balance text
   const switchOpacity = useTransform(
     scrollYProgress,
-    [0.30, 0.32, 0.44, 0.46],
+    [0.22, 0.24, 0.55, 0.60],
     [0, 1, 1, 0]
   );
 
@@ -66,22 +66,22 @@ export default function BackgroundController() {
   // TEXT SWITCH
   const offOpacity = useTransform(scrollYProgress, [0.30, 0.34], [1, 0]);
   // ON text fades in [0.38→0.42] then fades out [0.43→0.45] before CTA arrives
-const onOpacity = useTransform(
-  scrollYProgress,
-  [0.36, 0.40, 0.41, 0.43],
-  [0,   1,   1,   0]
-);
-  
+  const onOpacity = useTransform(
+    scrollYProgress,
+    [0.36, 0.40, 0.41, 0.43],
+    [0, 1, 1, 0]
+  );
+
 
   if (isMobile) return null;
 
-return (
-  <div className="bg-system">
+  return (
+    <div className="bg-system">
 
-    <motion.div className="bg hero-bg" style={{ opacity: heroOpacity }} />
-    <motion.div className="bg services-bg" style={{ opacity: servicesOpacity }} />
-    <motion.div className="bg stats-bg" style={{ opacity: statsOpacity }} />
-    <motion.div className="bg faq-bg-main" style={{ opacity: faqOpacity }} />
+      <motion.div className="bg hero-bg" style={{ opacity: heroOpacity }} />
+      <motion.div className="bg services-bg" style={{ opacity: servicesOpacity }} />
+      <motion.div className="bg stats-bg" style={{ opacity: statsOpacity }} />
+      <motion.div className="bg faq-bg-main" style={{ opacity: faqOpacity }} />
       {/* SWITCH + TEXT OVERLAY */}
       <motion.div
         className="balance-overlay"
@@ -129,7 +129,7 @@ return (
           </h1>
 
           <p>
-             every step you take makes it clearer.
+            every step you take makes it clearer.
           </p>
         </motion.div>
 
@@ -147,14 +147,14 @@ return (
           </h1>
 
           <p>
-         You don't have to have it all figured out,you just have to take the next step.
+            You don't have to have it all figured out,you just have to take the next step.
 
           </p>
         </motion.div>
 
       </motion.div>
 
-    
+
 
     </div>
   );

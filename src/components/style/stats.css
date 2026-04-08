@@ -74,49 +74,25 @@
   border-radius: 4px;
 }
 
+.stats-dot.finished {
+  background: #d1d1d1;
+}
+
 /* ================================
    MOBILE RESPONSIVE
    ================================ */
 @media (max-width: 900px) {
   .stats-section {
     flex-direction: column !important;
-    /* Stack normally */
     justify-content: center !important;
     min-height: 80vh !important;
     padding: 60px 8% !important;
-    gap: 30px !important;
-  }
-
-  /* Position number centered above text */
-  .stats-right {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
     display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin-bottom: 20px !important;
   }
 
-  .stats-number {
-    font-size: 10rem !important;
-    /* Smaller but centered */
-    letter-spacing: -6px !important;
-    opacity: 0.1 !important;
-    /* Higher contrast if needed but still background */
-    line-height: 0.8 !important;
-    color: #000 !important;
-    /* Dark number on white bg */
-  }
-
-  /* Centered text below number */
-  .stats-left {
-    max-width: 100% !important;
-    margin: 0 !important;
-    text-align: center !important;
-    position: relative !important;
-    z-index: 2 !important;
+  .stats-left,
+  .stats-right {
+    display: contents !important;
   }
 
   .stats-left h2 {
@@ -124,11 +100,48 @@
     margin-bottom: 24px !important;
     line-height: 1.1 !important;
     color: #1a1a1a !important;
+    order: 1;
+    text-align: center;
+    width: 100%;
   }
 
   .stats-left p {
     font-size: 1.1rem !important;
     line-height: 1.6 !important;
     color: #444 !important;
+    order: 2;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px !important;
+  }
+
+  .stats-number {
+    font-size: 10rem !important;
+    letter-spacing: -6px !important;
+    opacity: 0.1 !important;
+    line-height: 0.8 !important;
+    color: #000 !important;
+    order: 3;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0 !important;
+  }
+
+  .stats-dots {
+    order: 4;
+    display: flex;
+    justify-content: center !important;
+    width: 100%;
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .stats-dot {
+    background: rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .stats-dot.finished {
+    background: rgba(0, 0, 0, 0.3) !important;
   }
 }

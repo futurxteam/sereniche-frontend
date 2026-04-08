@@ -39,8 +39,11 @@ export default function CTA() {
             your direction — not ours. Learn more about how we work and what to
             expect from the process.
           </p>
-          <button className="cta-btn" onClick={() => navigate("/about")}>
-            Learn More <span className="cta-arrow">→</span>
+          <button 
+            className="cta-btn" 
+            onClick={() => window.location.href = "http://localhost:4000/facility/af391f25-96f5-4364-876d-99c393530802"}
+          >
+            BOOK SESSION <span className="cta-arrow">→</span>
           </button>
         </motion.div>
 

@@ -30,7 +30,7 @@ function WideServiceCard({ service, isFirst }) {
         <p className="ws-desc">{service.text}</p>
         <p className="ws-desc">{service.fullDescription}</p>
         <Link to={`/services/${service.id}`} className="ws-btn">
-          BOOK A SESSION <span className="ws-btn-dot">•</span>
+          LEARN MORE <span className="ws-btn-dot">•</span>
         </Link>
       </div>
     </div>

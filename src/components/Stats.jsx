@@ -59,7 +59,6 @@ export default function Stats(){
             <h2>{step.title}</h2>
             <p>{step.text}</p>
           </motion.div>
-
         </AnimatePresence>
 
         {/* Step dot indicators */}
@@ -67,7 +66,9 @@ export default function Stats(){
           {steps.map((_, i) => (
             <button
               key={i}
-              className={`stats-dot ${i === index ? "active" : ""}`}
+              className={`stats-dot ${i === index ? "active" : ""} ${
+                i < index ? "finished" : ""
+              }`}
               onClick={() => setIndex(i)}
               aria-label={`Go to step ${i + 1}`}
             />
