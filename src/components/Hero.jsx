@@ -48,7 +48,7 @@ export default function Hero() {
 
         <button 
           className="hero-button"
-          onClick={() => window.location.href = "http://localhost:4000/facility/af391f25-96f5-4364-876d-99c393530802"}
+          onClick={() => window.location.href = "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"}
         >
           BOOK SESSION
         </button>

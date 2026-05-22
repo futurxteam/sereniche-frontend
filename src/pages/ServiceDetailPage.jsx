@@ -95,7 +95,7 @@ export default function ServiceDetailPage() {
             <div className="sd-cta-card">
               <p>Ready to take the first step?</p>
               <a 
-                href="http://localhost:4000/facility/af391f25-96f5-4364-876d-99c393530802" 
+                href="https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681" 
                 className="sd-cta-btn"
               >
                 Book a Session
