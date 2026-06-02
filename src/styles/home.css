@@ -288,7 +288,7 @@ section#faq {
 }
 
 
-/* PATH LAYER — legacy, kept for safety */
+/* PATH LAYER   legacy, kept for safety */
 .path-layer {
   position: absolute;
   top: 0;
@@ -299,7 +299,7 @@ section#faq {
   pointer-events: none;
 }
 
-/* SCROLL LINE LAYER — continuous path, top-level absolute spanning the full document */
+/* SCROLL LINE LAYER   continuous path, top-level absolute spanning the full document */
 .scroll-line-layer {
   position: absolute;
   top: 0;
@@ -319,7 +319,7 @@ section#faq {
 /* Bloom glow at the origin point of the line (near hero focal point) */
 .scroll-line-bloom {
   position: absolute;
-  /* Right side, ~38% down — near hero image focal area */
+  /* Right side, ~38% down   near hero image focal area */
   top: 34%;
   left: 66%;
   width: 180px;
@@ -441,7 +441,7 @@ p {
 .footer-container {
   width: 100%;
   margin: 0;
-  /* ← was 40px — that was the white gap */
+  /* ← was 40px   that was the white gap */
   padding: 0;
   position: relative;
   overflow: hidden;

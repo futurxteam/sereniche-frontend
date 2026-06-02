@@ -2,7 +2,7 @@ import "./style/info2.css";
 export default function Info2() {
   return (
     <section className="info-section alt">
-      
+
       {/* Background */}
       <div className="info-bg info-bg-2" />
 
@@ -17,7 +17,7 @@ export default function Info2() {
         </h2>
 
         <p className="info-author">
-          — Clear Path Philosophy
+          Clear Path Philosophy
         </p>
       </div>
 

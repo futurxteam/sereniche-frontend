@@ -19,7 +19,7 @@ export default function ScrollLine() {
     restDelta: 0.001
   });
 
-  // Non-linear scroll mapping — Accelerates drawing exclusively during the loop part!
+  // Non-linear scroll mapping   Accelerates drawing exclusively during the loop part!
   // At exactly 10% scroll, we force 20% of the actual SVG path length (getTotalLength) to be fully drawn.
   // This violently solves the "cut off midway" issue, ensuring the entire circle completes before cards arrive.
   const pathLength = useTransform(smoothProgress, [0, 0.02, 0.10, 0.50, 1], [0, 0.10, 0.30, 0.80, 1]);

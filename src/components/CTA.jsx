@@ -14,33 +14,33 @@ export default function CTA() {
 
   // Left side rises up slightly as you scroll in
   const leftY = useTransform(scrollYProgress, [0, 1], [60, -90]);
-  // Right side sinks slightly — opposite direction for depth
+  // Right side sinks slightly   opposite direction for depth
   const rightY = useTransform(scrollYProgress, [0, 1], [-40, 80]);
 
   return (
     <div className="cta-block" ref={ref}>
       <div className="cta-inner">
 
-        {/* LEFT — bold value headline */}
+        {/* LEFT   bold value headline */}
         <motion.div className="cta-left" style={{ y: leftY }}>
           <span className="cta-eyebrow">About Sereniche</span>
           <h2 className="cta-headline">
-            From childhood to geriatric care — integrating psychiatry,
+            From childhood to geriatric care   integrating psychiatry,
             psychology, and preventive mental wellness with ethical,
             evidence-based practice.
           </h2>
         </motion.div>
 
-        {/* RIGHT — body + button */}
+        {/* RIGHT   body + button */}
         <motion.div className="cta-right" style={{ y: rightY }}>
           <p className="cta-body">
             Our sessions create space for that change to happen. We take time to
             understand your needs, offer structure where it helps, and support
-            your direction — not ours. Learn more about how we work and what to
+            your direction   not ours. Learn more about how we work and what to
             expect from the process.
           </p>
-          <button 
-            className="cta-btn" 
+          <button
+            className="cta-btn"
             onClick={() => window.location.href = "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"}
           >
             BOOK SESSION <span className="cta-arrow">→</span>

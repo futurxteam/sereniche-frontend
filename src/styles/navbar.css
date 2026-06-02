@@ -1,5 +1,5 @@
 /* ================================
-   GLASS NAVBAR — BASE
+   GLASS NAVBAR   BASE
    ================================ */
 .glass-navbar {
   position: fixed;
@@ -60,7 +60,7 @@
   opacity: 0.9;
 }
 /* ================================
-   LOGO — DEFAULT (dark bg → white)
+   LOGO   DEFAULT (dark bg → white)
    ================================ */
 .nav-logo {
   font-weight: 700;
@@ -73,7 +73,7 @@
 }
 
 /* ================================
-   NAV LINKS — DEFAULT (dark bg)
+   NAV LINKS   DEFAULT (dark bg)
    ================================ */
 .nav-links {
   display: flex;
@@ -97,7 +97,7 @@
   color: #b8a9c9;
 }
 
-/* Animated underline — default (purple) */
+/* Animated underline   default (purple) */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -114,7 +114,7 @@
 }
 
 /* ================================
-   LOGIN BUTTON — DEFAULT (dark bg)
+   LOGIN BUTTON   DEFAULT (dark bg)
    ================================ */
 .login-btn {
   background: rgba(255, 255, 255, 0.1);
@@ -134,7 +134,7 @@
 }
 
 /* ================================
-   🌕 LIGHT MODE — .glass-navbar.dark
+   🌕 LIGHT MODE   .glass-navbar.dark
    (Journal / Impact / Contact sections)
    ================================ */
 

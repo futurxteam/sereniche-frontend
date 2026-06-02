@@ -96,7 +96,7 @@ export default function StoryDetailPage() {
             <div className="sdt-aside-card">
               <p className="sdt-aside-name">{story.name}</p>
               <p className="sdt-aside-quote">
-                "Asking for support is not weakness — it is the bravest thing I ever did."
+                "Asking for support is not weakness   it is the bravest thing I ever did."
               </p>
             </div>
           </aside>
@@ -114,9 +114,9 @@ export default function StoryDetailPage() {
                   key={s.id}
                   className="sdt-other-card"
                 >
-                  <ParallaxImage 
-                    src={s.portraitImage} 
-                    alt={s.name} 
+                  <ParallaxImage
+                    src={s.portraitImage}
+                    alt={s.name}
                     containerClass="sdt-other-img-wrap"
                     className="sdt-other-card-img"
                     amount={20}

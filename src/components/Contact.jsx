@@ -6,13 +6,13 @@ export default function Contact() {
       <div className="contact-layout">
         <div className="contact-info">
           <h2 className="contact-title font-display">
-            Support starts<br/>with <span>a simple step.</span>
+            Support starts<br />with <span>a simple step.</span>
           </h2>
           <p className="contact-description">
-            Whether you're starting fresh, returning for ongoing support, or simply exploring your options — we're here to meet you where you are. Use the form to book a session that feels right for you.
+            Whether you're starting fresh, returning for ongoing support, or simply exploring your options   we're here to meet you where you are. Use the form to book a session that feels right for you.
           </p>
-          
-        
+
+
         </div>
 
         <div className="contact-form-side">
@@ -36,7 +36,7 @@ export default function Contact() {
                 <option>Other / Prefer not to say</option>
               </select>
             </div>
-            
+
             <h3 className="form-section-title font-display">How can we help?</h3>
             <div className="form-group">
               <textarea placeholder="Feel free to share anything that helps us understand your needs..." rows="2"></textarea>

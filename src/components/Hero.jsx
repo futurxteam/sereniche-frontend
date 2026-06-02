@@ -20,7 +20,7 @@ export default function Hero() {
       className="hero-container"
       style={{ scale, y: yScroll, opacity: opacityScroll }}
     >
-      {/* LEFT — Title (Entry animation reveals from down) */}
+      {/* LEFT   Title (Entry animation reveals from down) */}
       <motion.div
         className="hero-left"
         initial={{ y: 80, opacity: 0 }}
@@ -35,7 +35,7 @@ export default function Hero() {
         </h1>
       </motion.div>
 
-      {/* RIGHT — Description + Button (Entry animation reveals from down with slight delay) */}
+      {/* RIGHT   Description + Button (Entry animation reveals from down with slight delay) */}
       <motion.div
         className="hero-right"
         initial={{ y: 80, opacity: 0 }}
@@ -46,7 +46,7 @@ export default function Hero() {
           personalized and confidential space where you can speak freely, reflect deeply, and feel emotionally secure.
         </p>
 
-        <button 
+        <button
           className="hero-button"
           onClick={() => window.location.href = "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"}
         >

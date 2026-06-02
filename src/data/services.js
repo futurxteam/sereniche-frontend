@@ -28,11 +28,11 @@ export const services = [
     id: "adult",
     title: "Adult",
     text: "Life pulls you in every direction - career demands, relationships, family roles, financial pressures - stretching you constantly and often leaving you struggling to find that balance. In trying to meet expectations, you may neglect your inner world.",
-    image: "/services/5.jpg",
-    heroImage: "/services/5.jpg",
+    image: "/services/5.png",
+    heroImage: "/services/5.png",
     tag: "THERAPY",
     duration: "50 min per session",
-    format: "Individual — in-person or online",
+    format: "Individual   in-person or online",
     frequency: "Weekly recommended",
     fullDescription: "Your mind, however, deserves care in every dimension: emotional steadiness, clear thinking, meaningful connection, and purposeful growth. At Sereniche, we create space to restore that balance, rekindle your light, and regain a clarity within.",
     whatToExpect: [
@@ -53,13 +53,13 @@ export const services = [
     id: "geriatric",
     title: "GERIATRIC",
     text: "Aging is a journey that deserves to be navigated with dignity, comfort, and profound respect. We understand that after decades of selflessly nurturing others, prioritizing your own mental well-being can be a significant emotional shift.",
-    image: "/services/6.jpg",
-    heroImage: "/services/6.jpg",
+    image: "/services/6.png",
+    heroImage: "/services/6.png",
     tag: "WELLBEING",
     duration: "45 min per session",
     format: "Individual or Family-supported",
     frequency: "Weekly or as needed",
-    fullDescription: "That is why we offer a partnership rooted in compassion—blending expert psychiatric care and medical management with heartfelt support. Whether you require specialized management for dementia and memory loss, treatment for late-life depression and anxiety, or cognitive rehabilitation, our goal is to ensure your golden years are defined by clarity, independence, and the peace of mind that you are in safe, capable hands.",
+    fullDescription: "That is why we offer a partnership rooted in compassion blending expert psychiatric care and medical management with heartfelt support. Whether you require specialized management for dementia and memory loss, treatment for late-life depression and anxiety, or cognitive rehabilitation, our goal is to ensure your golden years are defined by clarity, independence, and the peace of mind that you are in safe, capable hands.",
     whatToExpect: [
       "A calm, patient and respectful therapeutic environment",
       "Support for coping with life transitions and aging",
@@ -85,8 +85,8 @@ export const services = [
     format: "Workshops, Seminars, Group Sessions",
     frequency: "On-demand or scheduled",
     fullDescription:
-"That is why we offer a partnership rooted in compassion—blending expert medical management with heartfelt emotional support. From preventative health to chronic care management, our goal is to ensure your golden years are defined by quality of life, independence, and the peace of mind that you are in safe, capable hands.",
-whatToExpect: [
+      "That is why we offer a partnership rooted in compassion blending expert medical management with heartfelt emotional support. From preventative health to chronic care management, our goal is to ensure your golden years are defined by quality of life, independence, and the peace of mind that you are in safe, capable hands.",
+    whatToExpect: [
       "Interactive workshops tailored to audience needs",
       "Practical mental health tools and awareness",
       "Expert-led sessions with real-life applications",

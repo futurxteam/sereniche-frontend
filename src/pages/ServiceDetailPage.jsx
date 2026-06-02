@@ -30,10 +30,10 @@ export default function ServiceDetailPage() {
 
       {/* Hero */}
       <div className="sd-hero">
-        <ParallaxImage 
-          src={service.heroImage} 
-          alt={service.title} 
-          containerClass="sd-hero-img" 
+        <ParallaxImage
+          src={service.heroImage}
+          alt={service.title}
+          containerClass="sd-hero-img"
           amount={80}
         />
         <div className="sd-hero-overlay" />
@@ -65,7 +65,7 @@ export default function ServiceDetailPage() {
         </div>
 
         <div className="sd-grid">
-          {/* Left — description */}
+          {/* Left   description */}
           <div className="sd-left">
             <h2 className="sd-section-title">About this service</h2>
             <p className="sd-description">{service.fullDescription}</p>
@@ -78,7 +78,7 @@ export default function ServiceDetailPage() {
             </ul>
           </div>
 
-          {/* Right — good for + CTA */}
+          {/* Right   good for + CTA */}
           <div className="sd-right">
             <div className="sd-good-for-card">
               <h3>Good for</h3>
@@ -94,8 +94,8 @@ export default function ServiceDetailPage() {
 
             <div className="sd-cta-card">
               <p>Ready to take the first step?</p>
-              <a 
-                href="https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681" 
+              <a
+                href="https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"
                 className="sd-cta-btn"
               >
                 Book a Session
@@ -112,9 +112,9 @@ export default function ServiceDetailPage() {
               .filter((s) => s.id !== id)
               .map((s) => (
                 <Link to={`/services/${s.id}`} key={s.id} className="sd-other-card">
-                  <ParallaxImage 
-                    src={s.image} 
-                    alt={s.title} 
+                  <ParallaxImage
+                    src={s.image}
+                    alt={s.title}
                     containerClass="sd-other-img-wrap"
                     className="sd-other-card-img"
                     amount={30}

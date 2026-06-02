@@ -38,12 +38,12 @@ export default function FAQ3() {
   return (
     <section className="faq3-section">
       <div className="faq3-container">
-        
+
         {/* Left Side */}
         <div className="faq3-left">
           <div className="faq3-left-top">
             <h2 className="faq3-headline">
-              Your questions.<br/>
+              Your questions.<br />
               <span className="faq3-highlight">Answered.</span>
             </h2>
             <p className="faq3-subtext">
@@ -53,9 +53,9 @@ export default function FAQ3() {
 
           <div className="faq3-left-bottom">
             <p className="faq3-fallback">
-              Didn't find your answer? Send us a message — we'll respond with care and clarity.
+              Didn't find your answer? Send us a message   we'll respond with care and clarity.
             </p>
-            <button 
+            <button
               className="faq3-btn"
               onClick={() => window.location.href = "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"}
             >
@@ -67,10 +67,10 @@ export default function FAQ3() {
         {/* Right Side */}
         <div className="faq3-right">
           {FAQs.map((faq, i) => (
-            <AccordionItem 
-              key={i} 
-              question={faq.q} 
-              answer={faq.a} 
+            <AccordionItem
+              key={i}
+              question={faq.q}
+              answer={faq.a}
               isOpen={openIndex === i}
               onClick={() => toggle(i)}
             />

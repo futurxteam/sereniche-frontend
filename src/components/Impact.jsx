@@ -10,12 +10,12 @@ export default function Impact() {
   });
 
   // Parallax values
- const imageY1 = useTransform(scrollYProgress, [0, 1], [-120, 120]); // container
-const imageY2 = useTransform(scrollYProgress, [0, 1], [-80, 80]);
+  const imageY1 = useTransform(scrollYProgress, [0, 1], [-120, 120]); // container
+  const imageY2 = useTransform(scrollYProgress, [0, 1], [-80, 80]);
 
-// INNER image (slower = depth effect)
-const innerY1 = useTransform(scrollYProgress, [0, 1], [-80, 80]);
-const innerY2 = useTransform(scrollYProgress, [0, 1], [-50, 50]);
+  // INNER image (slower = depth effect)
+  const innerY1 = useTransform(scrollYProgress, [0, 1], [-80, 80]);
+  const innerY2 = useTransform(scrollYProgress, [0, 1], [-50, 50]);
   return (
     <section className="impact-section" ref={ref}>
 
@@ -31,7 +31,7 @@ const innerY2 = useTransform(scrollYProgress, [0, 1], [-50, 50]);
 
         <p className="impact-text">
           After moving to a new city, Lisa thought she'd feel excited.
-          Instead, she felt unmoored — away from her friends, her old
+          Instead, she felt unmoored   away from her friends, her old
           routines, and her sense of who she was. She came to therapy
           not because something was "wrong," but because she wanted
           to feel at home in her own life again.
@@ -41,27 +41,27 @@ const innerY2 = useTransform(scrollYProgress, [0, 1], [-50, 50]);
       </div>
 
       {/* RIGHT IMAGES */}
-  <div className="impact-images">
+      <div className="impact-images">
 
-  {/* BACK IMAGE */}
-  <motion.div className="impact-img img-back" style={{ y: imageY1 }}>
-    <motion.img
-      src="/journal/2.png"
-      alt=""
-      style={{ y: innerY1 }}
-    />
-  </motion.div>
+        {/* BACK IMAGE */}
+        <motion.div className="impact-img img-back" style={{ y: imageY1 }}>
+          <motion.img
+            src="/journal/2.png"
+            alt=""
+            style={{ y: innerY1 }}
+          />
+        </motion.div>
 
-  {/* FRONT IMAGE */}
-  <motion.div className="impact-img img-front" style={{ y: imageY2 }}>
-    <motion.img
-      src="/journal/1.png"
-      alt=""
-      style={{ y: innerY2 }}
-    />
-  </motion.div>
+        {/* FRONT IMAGE */}
+        <motion.div className="impact-img img-front" style={{ y: imageY2 }}>
+          <motion.img
+            src="/journal/1.png"
+            alt=""
+            style={{ y: innerY2 }}
+          />
+        </motion.div>
 
-</div>
+      </div>
 
     </section>
   );

@@ -1,5 +1,5 @@
 /* ================================
-   CTA — Two-column parallax value statement
+   CTA   Two-column parallax value statement
    ================================ */
 
 .cta-block {
@@ -16,7 +16,7 @@
   padding: 0 8%;
 }
 
-/* ---- LEFT — headline ---- */
+/* ---- LEFT   headline ---- */
 .cta-left {
   flex: 1 1 52%;
 }
@@ -42,7 +42,7 @@
   margin: 0;
 }
 
-/* ---- RIGHT — body + button ---- */
+/* ---- RIGHT   body + button ---- */
 .cta-right {
   flex: 1 1 44%;
   display: flex;

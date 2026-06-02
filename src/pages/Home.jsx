@@ -49,7 +49,7 @@ export default function Home() {
               <p className="how-label">HOW IT WORKS</p>
               <h2 className="how-heading">Getting started doesn't have to be complicated.</h2>
               <p className="how-sub">
-                Our process is simple, supportive, and designed to move at a pace that feels right for you — from the first hello to the progress you'll see over time.
+                Our process is simple, supportive, and designed to move at a pace that feels right for you   from the first hello to the progress you'll see over time.
               </p>
             </div>
           </section>
@@ -85,7 +85,7 @@ export default function Home() {
 
           {/* The White Page Footer Section */}
           <div className="white-footer-section">
-            {/* Philosophy — inside white layer so fixed overlays don't bleed through */}
+            {/* Philosophy   inside white layer so fixed overlays don't bleed through */}
             <Philosophy />
             <Journal />
             <Impact />

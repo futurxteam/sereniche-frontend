@@ -31,17 +31,17 @@ export default function InsightPage() {
         />
         <div className="ip-hero-content">
           <div className="ip-hero-top">
-            <h1 className="ip-title" style={{textTransform:'lowercase'}}>
+            <h1 className="ip-title" style={{ textTransform: 'lowercase' }}>
               Insights for growth,<br />healing and clarity.
             </h1>
             <p className="ip-micro">
               Explore our journal for reflections, tools, and growth.
             </p>
           </div>
-          
+
           <div className="ip-statement">
             <p>
-              Reflections, gentle prompts, and practical tools — to help you
+              Reflections, gentle prompts, and practical tools   to help you
               move forward one step at a time.
             </p>
           </div>

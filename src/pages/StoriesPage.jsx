@@ -31,7 +31,7 @@ function StoryCard({ story, reverse }) {
         </Link>
       </div>
 
-      {/* Image side — stacked portrait with parallax */}
+      {/* Image side   stacked portrait with parallax */}
       <div className="story-card__images">
         {/* Background blurred large image */}
         <div className="story-card__img-bg">
@@ -70,18 +70,18 @@ function StoriesHero() {
       <div className="st-hero-overlay" />
       <div className="st-hero-content">
         <div className="st-hero-top">
-          <h1 className="st-hero-title" style={{textTransform:'lowercase'}}>
+          <h1 className="st-hero-title" style={{ textTransform: 'lowercase' }}>
             Stories of<br />transformation.
           </h1>
           <p className="st-hero-micro">
             REAL PEOPLE · REAL CHANGE
           </p>
         </div>
-        
+
         <div className="st-hero-statement">
           <p>
             Every journey through therapy is unique. These are a few of the
-            stories — shared with permission — that remind us why this work
+            stories   shared with permission   that remind us why this work
             matters.
           </p>
         </div>

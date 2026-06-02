@@ -69,7 +69,7 @@ export default function ServicePage() {
 
           <div className="sp-statement">
             <p>
-              Sereniche is a multidisciplinary mental health centre offering psychiatry, psychology, geriatric mental health services, professional training, and corporate wellness programs. We are committed to compassionate care, clinical excellence, and holistic emotional well-being. Through Sereniche Academy, we extend our work into education and professional development — fostering a trusted space for learning, growth, and lasting impact.
+              Sereniche is a multidisciplinary mental health centre offering psychiatry, psychology, geriatric mental health services, professional training, and corporate wellness programs. We are committed to compassionate care, clinical excellence, and holistic emotional well-being. Through Sereniche Academy, we extend our work into education and professional development   fostering a trusted space for learning, growth, and lasting impact.
             </p>
           </div>
         </div>

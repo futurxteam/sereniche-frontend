@@ -32,7 +32,7 @@ export default function ContactPage() {
             Support starts with<br />a simple step.
           </h1>
           <p className="cp-sub">
-            Whether you're starting fresh or returning for support — we're
+            Whether you're starting fresh or returning for support   we're
             here to meet you where you are.
           </p>
         </div>

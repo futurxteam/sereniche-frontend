@@ -2,7 +2,7 @@ import "./style/info1.css";
 export default function Info1() {
   return (
     <section className="info-section">
-      
+
       {/* Background */}
       <div className="info-bg" />
 
@@ -17,7 +17,7 @@ export default function Info1() {
         </h2>
 
         <p className="info-author">
-          — Philosophy of Nature
+          Philosophy of Nature
         </p>
       </div>
 
