@@ -256,6 +256,85 @@
   letter-spacing: 0.05em;
 }
 
+/* ── Categories (Assessments / Therapies / Conditions) ── */
+.sd-categories {
+  padding-top: 56px;
+  border-top: 1px solid #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 64px;
+}
+
+.sd-accordion-block { }
+
+.sd-accordion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sd-accordion-item {
+  border-bottom: 1px solid #f0eefc;
+  overflow: hidden;
+}
+
+.sd-accordion-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 14px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+.sd-accordion-trigger:hover { background: #faf8ff; }
+
+.sd-accordion-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #2a1a4e;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.sd-accordion-chevron {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #b8a9c9;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+  transition: color 0.2s;
+}
+.sd-accordion-item.open .sd-accordion-chevron { color: #7c5cbf; }
+
+.sd-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.25s ease;
+  padding: 0 4px;
+}
+.sd-accordion-item.open .sd-accordion-body {
+  max-height: 300px;
+  padding: 0 4px 14px;
+}
+
+.sd-accordion-body p {
+  font-size: 0.84rem;
+  color: #666;
+  line-height: 1.65;
+  margin: 0;
+  padding: 8px 0 0;
+  border-left: 2px solid #c4b5fd;
+  padding-left: 12px;
+}
+
 /* ── 404 ── */
 .sd-404 { padding: 200px 8%; text-align: center; }
 .sd-404 a { color: #b8a9c9; }
@@ -276,5 +355,7 @@
   
   .sd-others-grid { grid-template-columns: 1fr; gap: 32px; }
   .sd-other-img-wrap { height: 220px; }
+
+  .sd-categories { grid-template-columns: 1fr; gap: 32px; }
 }
 

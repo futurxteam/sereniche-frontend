@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 import { services } from "../data/services";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -6,6 +7,41 @@ import "../styles/navbar.css";
 import "../styles/servicedetail.css";
 
 import ParallaxImage from "../components/animations/ParallaxImage";
+
+/* ── Accordion for one category (Assessments / Therapies / Conditions) ── */
+function AccordionSection({ title, items, accentColor }) {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
+
+  return (
+    <div className="sd-accordion-block">
+      <h2 className="sd-section-title">{title}</h2>
+      <ul className="sd-accordion-list">
+        {items.map((item, i) => (
+          <li
+            key={i}
+            className={`sd-accordion-item${openIndex === i ? " open" : ""}`}
+          >
+            <button
+              className="sd-accordion-trigger"
+              onClick={() => toggle(i)}
+              aria-expanded={openIndex === i}
+            >
+              <span className="sd-accordion-name">{item.name}</span>
+              <span className="sd-accordion-chevron">
+                {openIndex === i ? "−" : "+"}
+              </span>
+            </button>
+            <div className="sd-accordion-body">
+              <p>{item.brief}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function ServiceDetailPage() {
   const { id } = useParams();
@@ -23,6 +59,8 @@ export default function ServiceDetailPage() {
       </div>
     );
   }
+
+  const hasCategories = service.assessments || service.therapies || service.conditions;
 
   return (
     <div className="sd-page">
@@ -65,7 +103,7 @@ export default function ServiceDetailPage() {
         </div>
 
         <div className="sd-grid">
-          {/* Left   description */}
+          {/* Left — description */}
           <div className="sd-left">
             <h2 className="sd-section-title">About this service</h2>
             <p className="sd-description">{service.fullDescription}</p>
@@ -78,7 +116,7 @@ export default function ServiceDetailPage() {
             </ul>
           </div>
 
-          {/* Right   good for + CTA */}
+          {/* Right — good for + CTA */}
           <div className="sd-right">
             <div className="sd-good-for-card">
               <h3>Good for</h3>
@@ -103,6 +141,21 @@ export default function ServiceDetailPage() {
             </div>
           </div>
         </div>
+
+        {/* Assessments / Therapies / Conditions accordion */}
+        {hasCategories && (
+          <div className="sd-categories">
+            {service.assessments && (
+              <AccordionSection title="Assessments" items={service.assessments} />
+            )}
+            {service.therapies && (
+              <AccordionSection title="Therapies" items={service.therapies} />
+            )}
+            {service.conditions && (
+              <AccordionSection title="Conditions" items={service.conditions} />
+            )}
+          </div>
+        )}
 
         {/* Other services */}
         <div className="sd-others">
