@@ -56,8 +56,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <Link to="/stories">Stories</Link>
-              <Link to="/insights">Insights</Link>
+
               <Link to="/contact">Contact Us</Link>
             </div>
           </div>
