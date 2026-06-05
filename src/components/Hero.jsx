@@ -1,7 +1,9 @@
 import { useScroll, useTransform, motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./style/hero.css";
 
 export default function Hero() {
+  const navigate = useNavigate();
   const { scrollYProgress } = useScroll();
 
   // --- HERO CONTENT TRANSFORMS (all happen in first 25% of scroll) ---
@@ -48,9 +50,9 @@ export default function Hero() {
 
         <button
           className="hero-button"
-          onClick={() => window.location.href = "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"}
+          onClick={() => navigate("/contact")}
         >
-          BOOK SESSION
+          CONTACT US
         </button>
       </motion.div>
     </motion.div>

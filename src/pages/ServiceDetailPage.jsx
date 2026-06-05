@@ -132,12 +132,12 @@ export default function ServiceDetailPage() {
 
             <div className="sd-cta-card">
               <p>Ready to take the first step?</p>
-              <a
-                href="https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"
+              <Link
+                to="/contact"
                 className="sd-cta-btn"
               >
-                Book a Session
-              </a>
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>

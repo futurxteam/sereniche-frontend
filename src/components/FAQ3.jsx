@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style/faq3.css";
 
 const FAQs = [
@@ -31,6 +31,7 @@ function AccordionItem({ question, answer, isOpen, onClick }) {
 }
 
 export default function FAQ3() {
+  const navigate = useNavigate();
   const [openIndex, setOpenIndex] = useState(0); // keep first one open by default like the image
 
   const toggle = (i) => setOpenIndex(i === openIndex ? -1 : i);
@@ -57,12 +58,13 @@ export default function FAQ3() {
             </p>
             <button
               className="faq3-btn"
-              onClick={() => window.location.href = "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"}
+              onClick={() => navigate("/contact")}
             >
-              BOOK SESSION <span className="faq3-btn-dot">•</span>
+              CONTACT US <span className="faq3-btn-dot">•</span>
             </button>
           </div>
         </div>
+
 
         {/* Right Side */}
         <div className="faq3-right">

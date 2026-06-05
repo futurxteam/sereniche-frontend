@@ -89,9 +89,9 @@ export default function Philosophy() {
       {/* Button */}
       <button
         className="phil-btn"
-        onClick={() => window.location.href = "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"}
+        onClick={() => navigate("/contact")}
       >
-        BOOK SESSION <span className="phil-btn-dot">•</span>
+        CONTACT US <span className="phil-btn-dot">•</span>
       </button>
     </section>
   );

@@ -36,44 +36,26 @@
   margin-bottom: 30px;
 }
 
-/* Input */
-.footer-input {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+/* Email Wrap */
+.footer-email-wrap {
+  margin-top: 10px;
 }
 
-.footer-input input {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 10px 0;
+.footer-email-link {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-family: "Playfair Display", serif;
   color: white;
-  width: 250px;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.footer-input input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Button */
-.footer-input button {
-  background: white;
-  color: black;
-  padding: 10px 24px;
-  border-radius: 999px;
-  border: none;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  cursor: pointer;
-}
-
-/* Note */
-.footer-note {
-  display: block;
-  margin-top: 20px;
-  font-size: 0.8rem;
-  opacity: 0.6;
+.footer-email-link:hover {
+  color: #c4a8e9;
+  border-color: #c4a8e9;
+  transform: translateY(-2px);
 }
 
 .footer-right h4 {
@@ -139,15 +121,6 @@
     flex-wrap: wrap;
   }
 
-  .footer-input {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 15px !important;
-  }
-
-  .footer-input input {
-    width: 100% !important;
-  }
 }
 
 

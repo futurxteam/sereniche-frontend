@@ -41,9 +41,9 @@ export default function CTA() {
           </p>
           <button
             className="cta-btn"
-            onClick={() => window.location.href = "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681"}
+            onClick={() => navigate("/contact")}
           >
-            BOOK SESSION <span className="cta-arrow">→</span>
+            CONTACT US <span className="cta-arrow">→</span>
           </button>
         </motion.div>
 

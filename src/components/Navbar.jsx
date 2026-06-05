@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useLocation,useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 export default function Navbar() {
   const [isLight, setIsLight] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -58,19 +58,16 @@ export default function Navbar() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><Link to="/stories">Stories</Link></li>
-              <li><Link to="/insights">Insights</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className="nav-actions">
- <button
-      className="login-btn"
-onClick={() => {
-  window.location.href =
-    "https://care-emr-fe.vercel.app/facility/62aa2ee9-cc69-43ad-8c31-2a1574185681";
-}}    >
-      Book a Session
-    </button>               </div>
+              <button
+                className="login-btn"
+                onClick={() => navigate("/contact")}
+              >
+                Contact Us
+              </button>
+            </div>
           </div>
 
           <button
@@ -95,13 +92,13 @@ onClick={() => {
         </ul>
 
         <div className="nav-actions">
-
- <button
-      className="login-btn"
-      onClick={() => navigate("/facility/af391f25-96f5-4364-876d-99c393530802")}
-    >
-      Book a Session
-    </button>          {/* Explicit close for mobile */}
+          <button
+            className="login-btn"
+            onClick={() => navigate("/contact")}
+          >
+            Contact Us
+          </button>
+          {/* Explicit close for mobile */}
           <button
             className="mobile-close-btn"
             onClick={() => setIsOpen(false)}

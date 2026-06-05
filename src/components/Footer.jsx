@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 import "./style/footer.css";
+
 export default function Footer() {
   const ref = useRef(null);
 
@@ -29,22 +31,17 @@ export default function Footer() {
 
         {/* LEFT */}
         <div className="footer-left">
-          <h2>Join Our<br />Newsletter.</h2>
+          <h2>Contact Us.</h2>
 
           <p>
-            We share occasional insights on personal growth,
-            emotional well-being, and practical tools to
-            navigate life with more clarity and balance.
+            Have questions or want to reach out? Feel free to email us directly. We are here to support you.
           </p>
 
-          <div className="footer-input">
-            <input placeholder="Your Email" />
-            <button>SUBSCRIBE</button>
+          <div className="footer-email-wrap">
+            <a href="mailto:hello@sereniche.com" className="footer-email-link">
+              hello@sereniche.com
+            </a>
           </div>
-
-          <span className="footer-note">
-            By signing up, you agree to our Privacy Policy.
-          </span>
         </div>
 
         {/* RIGHT */}
@@ -53,19 +50,15 @@ export default function Footer() {
 
           <div className="footer-links">
             <div>
-              <a>Main Page</a>
-              <a>About</a>
-              <a>Services</a>
-              <a>Stories</a>
-              <a>Journal</a>
+              <Link to="/">Home</Link>
+              <Link to="/about">About</Link>
+              <Link to="/services">Services</Link>
             </div>
 
             <div>
-              <a>Articles</a>
-              <a>Book a Session</a>
-              <a>Privacy Policy</a>
-              <a>Terms of Use</a>
-              <a>404</a>
+              <Link to="/stories">Stories</Link>
+              <Link to="/insights">Insights</Link>
+              <Link to="/contact">Contact Us</Link>
             </div>
           </div>
         </div>

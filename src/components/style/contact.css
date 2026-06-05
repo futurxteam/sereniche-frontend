@@ -116,3 +116,22 @@
 .form-group select:focus {
   background-size: 100% 2px;
 }
+
+.contact-submit-btn {
+  background: #2c3532;
+  color: white;
+  border: none;
+  padding: 14px 44px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 20px;
+}
+
+.contact-submit-btn:hover {
+  background: #b8a9c9;
+  transform: translateY(-2px);
+}

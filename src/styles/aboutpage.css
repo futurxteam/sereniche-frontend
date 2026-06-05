@@ -238,6 +238,25 @@
   display: flex;
   gap: 30px;
   justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Second row: 3 members */
+.ap-team-grid--row2 {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+/* Third row: 1 member centred */
+.ap-team-grid--row3 {
+  max-width: 33.33%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 0;
 }
 
 .ap-team-card {
@@ -267,9 +286,18 @@
 .ap-team-card h3 {
   font-family: "Playfair Display", serif;
   font-size: 1.6rem;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: #1a1a1a;
   line-height: 1.2;
+}
+
+.ap-team-credentials {
+  font-family: "Inter", sans-serif;
+  font-size: 0.82rem;
+  color: #a067bc;
+  font-style: italic;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.5;
 }
 
 .ap-team-card p {
@@ -278,6 +306,14 @@
   color: #555;
   margin: 0;
   line-height: 1.6;
+}
+
+.ap-team-bio {
+  font-family: "Inter", sans-serif;
+  font-size: 0.88rem !important;
+  color: #777 !important;
+  margin-top: 10px !important;
+  line-height: 1.55;
 }
 
 /* Responsive */
@@ -298,6 +334,14 @@
 
   .ap-team-grid {
     flex-direction: column;
+  }
+
+  .ap-team-grid--row2 {
+    max-width: 100%;
+  }
+
+  .ap-team-grid--row3 {
+    max-width: 100%;
   }
 
   .founder-card__images {
