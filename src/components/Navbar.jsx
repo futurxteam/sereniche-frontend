@@ -43,6 +43,9 @@ export default function Navbar() {
         ref={navRef}
         className={`glass-navbar ${isLight ? "dark" : ""}${isOpen ? " menu-open" : ""}`}
       >
+        {/* Fading Glass Background Layer */}
+        <div className="nav-bg-overlay" />
+
         <div className="nav-container">
           <Link className="nav-logo" to="/">
             <img

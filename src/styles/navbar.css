@@ -7,20 +7,26 @@
   left: 0;
   right: 0;
   height: 90px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.nav-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background: rgba(15, 15, 18, 0.08); /* Highly transparent background tint */
-  
   backdrop-filter: blur(12px) saturate(120%);
   -webkit-backdrop-filter: blur(12px) saturate(120%);
 
   /* Fades out both the background color and the blur toward the bottom to prevent any sharp edge */
   mask-image: linear-gradient(to bottom, black 0%, black 35%, rgba(0, 0, 0, 0.3) 75%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 35%, rgba(0, 0, 0, 0.3) 75%, transparent 100%);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  transition: all 0.4s ease;
+  pointer-events: none;
 }
 
 /* ================================
@@ -33,6 +39,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 2; /* Sits above the background blur overlay */
 }
 /* Logo container */
 .nav-logo {
@@ -138,9 +146,8 @@
    (Journal / Impact / Contact sections)
    ================================ */
 
-.glass-navbar.dark {
+.glass-navbar.dark .nav-bg-overlay {
   background: rgba(255, 255, 255, 0.12); /* Highly transparent white background tint */
-  border-bottom: none;
 }
 
 /* Logo → dark text */
