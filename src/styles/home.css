@@ -540,8 +540,7 @@ p {
     height: auto !important;
     background: linear-gradient(to bottom right, rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.7)), url("/hero.png");
     background-size: cover;
-    background-position: 35% center;
-    /* Shift subject to the right */
+    background-position: center center !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
