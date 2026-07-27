@@ -470,11 +470,15 @@ p {
 /* --- MOBILE ONLY OVERRIDES --- */
 @media (max-width: 768px) {
 
-  /* Hide fixed background system and parallax */
+  /* Hide fixed background system, parallax, and SVG scroll line design */
   .bg-system,
   .parallax-bg,
   .balance-switch,
-  .balance-overlay {
+  .balance-overlay,
+  .scroll-line-layer,
+  .scroll-line-svg,
+  .scroll-line-bloom,
+  .path-layer {
     display: none !important;
   }
 

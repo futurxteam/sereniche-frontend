@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 /**
@@ -10,6 +11,15 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
  * Lives inside .bg-system (fixed, z-index:1), above bg images.
  */
 export default function ScrollLine() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   const { scrollYProgress } = useScroll();
 
   // Apply spring physics to scroll progress for premium, fluid, non-jittery motion
@@ -29,6 +39,8 @@ export default function ScrollLine() {
 
   // Steady origin bloom
   const glowOpacity = useTransform(smoothProgress, [0, 0.05], [0, 0.6]);
+
+  if (isMobile) return null;
 
   return (
     <div className="scroll-line-layer">
