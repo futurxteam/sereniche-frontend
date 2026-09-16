@@ -1,31 +1,50 @@
-/* ================================
-   GLASS NAVBAR   BASE
-   ================================ */
+/* ================================================
+   GLOBAL FIXED GLASS NAVBAR & SERENICHE LOGO
+   ================================================ */
 .glass-navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 90px;
+  height: 84px;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
-  transition: all 0.4s ease;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .nav-bg-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to bottom,
-      rgba(15, 15, 18, 0.3) 0%,
-      rgba(15, 15, 18, 0.08) 70%,
-      rgba(15, 15, 18, 0) 100%);
-  backdrop-filter: blur(5px) saturate(115%);
-  -webkit-backdrop-filter: blur(5px) saturate(115%);
+  background: rgba(18, 15, 25, 0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
   pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+/* STRAIGHT DIVIDER LINE UNDERNEATH NAVBAR */
+.nav-divider-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(160, 103, 188, 0.1) 0%,
+    rgba(160, 103, 188, 0.45) 30%,
+    rgba(212, 175, 55, 0.45) 50%,
+    rgba(160, 103, 188, 0.45) 70%,
+    rgba(160, 103, 188, 0.1) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+  transition: background 0.3s ease;
 }
 
 /* ================================
@@ -40,83 +59,88 @@
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  /* Sits above the background blur overlay */
 }
 
-/* Logo container */
-.nav-logo {
-  display: flex;
+/* ================================================
+   SERENICHE LOGO CONTAINER & HOVER INTERACTION
+   ================================================ */
+.nav-logo,
+.sereniche-logo-wrapper {
+  display: inline-flex;
   align-items: center;
   height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  z-index: 130 !important;
 }
 
-/* Logo image */
-.nav-logo-img {
-  height: 162px;
+/* Logo Image Base State */
+.nav-logo-img,
+.sereniche-logo {
+  height: 150px;
   width: auto;
   object-fit: contain;
-
-  /* smooth scaling and glow transition */
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
-              filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.3s ease;
-  filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0));
-}
-
-/* Hover effect on desktop devices */
-@media (hover: hover) and (pointer: fine) {
-  .nav-logo:hover .nav-logo-img {
-    transform: scale(1.06);
-    opacity: 0.98;
-    filter: drop-shadow(0 0 12px rgba(196, 181, 253, 0.55)) 
-            drop-shadow(0 0 22px rgba(212, 175, 55, 0.35));
-  }
-
-  .glass-navbar.dark .nav-logo:hover .nav-logo-img {
-    filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.45)) 
-            drop-shadow(0 0 22px rgba(212, 175, 55, 0.35));
-  }
-}
-
-/* ================================
-   LOGO   DEFAULT (dark bg → white)
-   ================================ */
-.nav-logo {
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: -0.5px;
-  color: #fff;
+  transform-origin: center center;
   cursor: pointer;
-  transition: color 0.3s ease;
-  text-decoration: none;
+  display: block;
+  pointer-events: auto;
+  will-change: transform, filter;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.28s ease;
+  filter: drop-shadow(0 0 0px transparent) brightness(1);
+}
+
+/* Logo Image Hover State (Scale + Purple/Gold Glow + Brightness) */
+.nav-logo:hover .nav-logo-img,
+.sereniche-logo-wrapper:hover .sereniche-logo,
+.nav-logo-img:hover,
+.sereniche-logo:hover {
+  transform: scale(1.06);
+  opacity: 1;
+  filter: drop-shadow(0 0 12px rgba(196, 181, 253, 0.65)) 
+          drop-shadow(0 0 22px rgba(212, 175, 55, 0.45))
+          brightness(1.08);
+}
+
+/* Light Theme Logo Hover State */
+.glass-navbar.dark .nav-logo:hover .nav-logo-img,
+.glass-navbar.dark .sereniche-logo-wrapper:hover .sereniche-logo,
+.glass-navbar.dark .nav-logo-img:hover,
+.glass-navbar.dark .sereniche-logo:hover {
+  transform: scale(1.06);
+  opacity: 1;
+  filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.55)) 
+          drop-shadow(0 0 22px rgba(212, 175, 55, 0.4))
+          brightness(1.06);
 }
 
 /* ================================
-   NAV LINKS   DEFAULT (dark bg)
+   NAV LINKS DEFAULT (dark bg)
    ================================ */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.2rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.92rem;
   font-weight: 500;
+  letter-spacing: 0.02em;
   position: relative;
   transition: color 0.3s ease;
 }
 
-/* Purple hover on dark sections */
 .nav-links a:hover {
-  color: #b8a9c9;
+  color: #c4b5fd;
 }
 
-/* Animated underline   default (purple) */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -124,8 +148,8 @@
   bottom: -4px;
   width: 0%;
   height: 1.5px;
-  background: #b8a9c9;
-  transition: width 0.3s ease, background 0.3s ease;
+  background: linear-gradient(90deg, #c4b5fd, #d4af37);
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
@@ -133,90 +157,93 @@
 }
 
 /* ================================
-   LOGIN BUTTON   DEFAULT (dark bg)
+   CONTACT US BUTTON OUTLINED PILL
    ================================ */
 .login-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  background: transparent;
+  border: 1.5px solid rgba(196, 181, 253, 0.45);
+  color: #ffffff;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
   font-weight: 600;
+  letter-spacing: 0.03em;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .login-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(160, 103, 188, 0.18);
+  border-color: #d4af37;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(196, 181, 253, 0.35), 0 0 6px rgba(212, 175, 55, 0.2);
   transform: translateY(-1px);
 }
 
 /* ================================
-   🌕 LIGHT MODE   .glass-navbar.dark
-   (Journal / Impact / Contact sections)
+   🌕 LIGHT MODE OVERLAY .glass-navbar.dark
    ================================ */
+.glass-navbar.dark {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
 
 .glass-navbar.dark .nav-bg-overlay {
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.45) 0%,
-      rgba(255, 255, 255, 0.15) 70%,
-      rgba(255, 255, 255, 0) 100%);
+  background: rgba(255, 255, 255, 0.88);
 }
 
-/* Logo → dark text */
-.glass-navbar.dark .nav-logo {
-  color: #222;
+.glass-navbar.dark .nav-divider-line {
+  background: linear-gradient(
+    90deg,
+    rgba(160, 103, 188, 0.15) 0%,
+    rgba(160, 103, 188, 0.5) 30%,
+    rgba(180, 140, 40, 0.5) 50%,
+    rgba(160, 103, 188, 0.5) 70%,
+    rgba(160, 103, 188, 0.15) 100%
+  );
 }
 
-/* Nav links → dark text */
 .glass-navbar.dark .nav-links a {
-  color: #333;
+  color: #2b2b36;
 }
 
-/* Hover → white on light bg */
 .glass-navbar.dark .nav-links a:hover {
-  color: #111;
+  color: #7c3aed;
 }
 
-/* Underline → dark on light bg */
 .glass-navbar.dark .nav-links a::after {
-  background: #444;
+  background: linear-gradient(90deg, #7c3aed, #d4af37);
 }
 
-/* Login button → subtle dark style */
 .glass-navbar.dark .login-btn {
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  color: #222;
+  background: transparent;
+  border: 1.5px solid rgba(124, 58, 237, 0.45);
+  color: #2b2b36;
 }
 
 .glass-navbar.dark .login-btn:hover {
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(124, 58, 237, 0.08);
+  border-color: #a067bc;
+  color: #7c3aed;
+  box-shadow: 0 0 14px rgba(124, 58, 237, 0.2);
   transform: translateY(-1px);
 }
 
-/* Logo layering for mobile menu */
-.nav-logo {
-  z-index: 130 !important;
-  /* Always on top */
-  position: relative;
-}
-
+/* ================================
+   HAMBURGER TOGGLE
+   ================================ */
 .glass-navbar .nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 130;
-  /* Align with logo */
+  z-index: 1030;
   position: relative;
 }
 
 .hamburger {
   display: block;
-  width: 28px;
+  width: 26px;
   height: 2px;
   background: white;
   position: relative;
@@ -231,22 +258,16 @@
 .hamburger::after {
   content: "";
   position: absolute;
-  width: 28px;
+  width: 26px;
   height: 2px;
   background: inherit;
   left: 0;
   transition: all 0.3s;
 }
 
-.hamburger::before {
-  top: -9px;
-}
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
 
-.hamburger::after {
-  top: 9px;
-}
-
-/* Open state for hamburger */
 .menu-open .hamburger {
   background: transparent !important;
 }
@@ -268,14 +289,13 @@
   background: #222 !important;
 }
 
-/* Desktop menu positioning */
+/* Desktop menu container */
 .nav-menu.desktop {
   display: flex !important;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2.2rem;
 }
 
-/* Mobile menu hidden on desktop by default */
 .nav-menu.mobile {
   display: none;
 }
@@ -284,52 +304,49 @@
    MOBILE RESPONSIVE
    ================================ */
 @media (max-width: 900px) {
-
-  /* Hide desktop version on mobile */
   .nav-menu.desktop {
     display: none !important;
   }
 
-  /* Show mobile version */
   .nav-menu.mobile {
     display: flex !important;
   }
 
   .glass-navbar {
-    height: 80px;
+    height: 76px;
   }
 
-  .nav-logo-img {
-    height: 140px;
+  .nav-logo-img,
+  .sereniche-logo {
+    height: 130px;
   }
 
   .nav-toggle {
     display: block !important;
   }
 
-  /* Updated Overlay */
   .nav-menu.mobile {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 100vh;
-    background: rgba(18, 18, 22, 0.95) !important;
+    background: rgba(15, 12, 22, 0.96) !important;
     backdrop-filter: blur(25px) saturate(160%);
     -webkit-backdrop-filter: blur(25px) saturate(160%);
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    padding: 120px 32px 80px 32px;
-    gap: 3.5rem;
+    padding: 100px 32px 60px 32px;
+    gap: 2.8rem;
     transform: translateY(-100%);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 120;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1020;
     visibility: hidden;
   }
 
   .glass-navbar.dark .nav-menu.mobile {
-    background: rgba(255, 255, 255, 0.95) !important;
+    background: rgba(255, 255, 255, 0.97) !important;
   }
 
   .nav-menu.mobile.open {
@@ -338,10 +355,10 @@
   }
 
   .nav-links {
-    display: flex !important;
+    display: flex !important; 
     flex-direction: column !important;
     align-items: center !important;
-    gap: 2.5rem !important;
+    gap: 2rem !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -349,14 +366,12 @@
 
   .nav-links li {
     list-style: none;
-    /* Hide bullets */
     width: 100%;
     text-align: center;
   }
 
   .nav-links a {
-    font-size: 1.8rem !important;
-    /* Increase size */
+    font-size: 1.6rem !important;
     color: white !important;
     font-weight: 500;
     display: block;
@@ -373,35 +388,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    margin-top: 20px;
+    gap: 1.2rem;
+    margin-top: 10px;
   }
 
   .login-btn {
-    padding: 14px 60px !important;
-    font-size: 1.1rem !important;
-    background: white !important;
-    color: black !important;
-    border-radius: 30px;
+    padding: 12px 50px !important;
+    font-size: 1rem !important;
+    border: 1.5px solid rgba(196, 181, 253, 0.6) !important;
+    color: white !important;
+    border-radius: 9999px;
     width: 80%;
-    max-width: 300px;
+    max-width: 280px;
   }
 
   .glass-navbar.dark .login-btn {
-    background: #222 !important;
-    color: white !important;
+    border-color: #a067bc !important;
+    color: #222 !important;
   }
 
   .mobile-close-btn {
     background: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    padding: 12px 40px;
-    border-radius: 30px;
-    font-size: 1rem;
+    padding: 10px 36px;
+    border-radius: 9999px;
+    font-size: 0.9rem;
     cursor: pointer;
     width: 80%;
-    max-width: 300px;
+    max-width: 280px;
     transition: all 0.2s;
   }
 

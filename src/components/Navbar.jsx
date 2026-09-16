@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import "../styles/navbar.css";
+
 export default function Navbar() {
   const [isLight, setIsLight] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -47,11 +49,11 @@ export default function Navbar() {
         <div className="nav-bg-overlay" />
 
         <div className="nav-container">
-          <Link className="nav-logo" to="/">
+          <Link className="nav-logo sereniche-logo-wrapper" to="/">
             <img
               src={isLight ? "/Sereniche academy-dark.png" : "/Sereniche academy-light.png"}
               alt="Sereniche"
-              className="nav-logo-img"
+              className="nav-logo-img sereniche-logo"
             />
           </Link>
 
