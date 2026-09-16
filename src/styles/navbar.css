@@ -53,23 +53,29 @@
 /* Logo image */
 .nav-logo-img {
   height: 162px;
-  /* adjust based on your logo */
   width: auto;
   object-fit: contain;
 
-  /* smooth scaling */
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* smooth scaling and glow transition */
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.3s ease;
+  filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0));
 }
 
-.nav-logo-img {
-  height: 162px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+/* Hover effect on desktop devices */
+@media (hover: hover) and (pointer: fine) {
+  .nav-logo:hover .nav-logo-img {
+    transform: scale(1.06);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 12px rgba(196, 181, 253, 0.55)) 
+            drop-shadow(0 0 22px rgba(212, 175, 55, 0.35));
+  }
 
-/* Hover effect */
-.nav-logo:hover .nav-logo-img {
-  transform: scale(1.05);
-  opacity: 0.9;
+  .glass-navbar.dark .nav-logo:hover .nav-logo-img {
+    filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.45)) 
+            drop-shadow(0 0 22px rgba(212, 175, 55, 0.35));
+  }
 }
 
 /* ================================
