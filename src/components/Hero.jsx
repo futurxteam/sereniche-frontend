@@ -44,9 +44,7 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
       >
-        <p className="hero-description">
-          personalized and confidential space where you can speak freely, reflect deeply, and feel emotionally secure.
-        </p>
+
 
         <button
           className="hero-button"

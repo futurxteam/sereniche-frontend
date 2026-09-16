@@ -146,10 +146,7 @@ export default function BackgroundController() {
             but there are clear steps forward.
           </h1>
 
-          <p>
-            You don't have to have it all figured out,you just have to take the next step.
 
-          </p>
         </motion.div>
 
       </motion.div>

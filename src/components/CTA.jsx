@@ -33,12 +33,7 @@ export default function CTA() {
 
         {/* RIGHT   body + button */}
         <motion.div className="cta-right" style={{ y: rightY }}>
-          <p className="cta-body">
-            Our sessions create space for that change to happen. We take time to
-            understand your needs, offer structure where it helps, and support
-            your direction   not ours. Learn more about how we work and what to
-            expect from the process.
-          </p>
+
           <button
             className="cta-btn"
             onClick={() => navigate("/contact")}

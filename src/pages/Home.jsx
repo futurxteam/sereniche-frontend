@@ -3,17 +3,14 @@ import ParallaxController from "../systems/ParallaxController";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Stats from "../components/Stats";
-import Info1 from "../components/Info1";
-import Info2 from "../components/Info2";
 import Philosophy from "../components/Philosophy";
 import FAQ from "../components/FAQ";
 import FAQ2 from "../components/FAQ2";
 import CTA from "../components/CTA";
 import Navbar from "../components/Navbar";
 import ScrollLine from "../components/ScrollLine";
-import CurvedTopBox from "../components/CurvedTopBox";
-import Journal from "../components/Journal";
-import Impact from "../components/Impact";
+
+
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import UserStats from "../components/UserStats";
@@ -48,9 +45,7 @@ export default function Home() {
             <div className="how-it-works-intro">
               <p className="how-label">HOW IT WORKS</p>
               <h2 className="how-heading">Getting started doesn't have to be complicated.</h2>
-              <p className="how-sub">
-                Our process is simple, supportive, and designed to move at a pace that feels right for you   from the first hello to the progress you'll see over time.
-              </p>
+
             </div>
           </section>
 
@@ -73,22 +68,13 @@ export default function Home() {
               <CTA />
             </section>
           </div>
-          <CurvedTopBox className="info-bg">
-            <section id="info1">
-              <Info1 />
-            </section>
-
-            <section id="info2">
-              <Info2 />
-            </section>
-          </CurvedTopBox>
 
           {/* The White Page Footer Section */}
           <div className="white-footer-section">
             {/* Philosophy   inside white layer so fixed overlays don't bleed through */}
             <Philosophy />
-            <Journal />
-            <Impact />
+
+
             <UserStats />
             <FAQ3 />
             <Contact />

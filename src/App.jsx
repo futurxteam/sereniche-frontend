@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import FloatingContactWidget from "./components/FloatingContactWidget";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
@@ -14,6 +16,8 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <Navbar />
+      <FloatingContactWidget />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />

@@ -9,10 +9,7 @@ export default function UserStats() {
           From first steps to lasting change, these numbers reflect the impact of{" "}
           <span className="us-highlight">walking the path together.</span>
         </h2>
-        <p className="us-subtext">
-          Behind every number is a story of progress. These milestones capture
-          the work, dedication, and care we bring to each step of the journey.
-        </p>
+
       </div>
 
       <div className="us-grid">

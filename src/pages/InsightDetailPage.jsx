@@ -30,10 +30,10 @@ export default function InsightDetailPage() {
 
       {/* Hero */}
       <div className="id-hero">
-        <ParallaxImage 
-          src={insight.image} 
-          alt={insight.title} 
-          containerClass="id-hero-img" 
+        <ParallaxImage
+          src={insight.image}
+          alt={insight.title}
+          containerClass="id-hero-img"
           amount={70}
         />
         <div className="id-hero-overlay" />
@@ -68,9 +68,9 @@ export default function InsightDetailPage() {
               .filter((item) => item.id !== id)
               .map((item) => (
                 <Link to={`/insights/${item.id}`} key={item.id} className="id-other-card">
-                  <ParallaxImage 
-                    src={item.image} 
-                    alt={item.title} 
+                  <ParallaxImage
+                    src={item.image}
+                    alt={item.title}
                     containerClass="id-other-img-wrap"
                     className="id-other-card-img"
                     amount={20}
