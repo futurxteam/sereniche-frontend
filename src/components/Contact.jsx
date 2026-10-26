@@ -6,7 +6,6 @@ export default function Contact() {
     name: "",
     email: "",
     phone: "",
-    pronouns: "",
     message: ""
   });
 
@@ -17,20 +16,22 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, phone, pronouns, message } = formData;
 
-    const subject = encodeURIComponent(`Contact Request from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${phone || "Not provided"}\n` +
-      `Pronouns: ${pronouns || "Not provided"}\n\n` +
-      `Message:\n${message}`
-    );
+    const { name, email, phone, message } = formData;
 
-    window.location.href = `mailto:hello@sereniche.com?subject=${subject}&body=${body}`;
+    const whatsappMessage =
+      `*Contact Request*\n\n` +
+      `*Name:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Phone:* ${phone || "Not provided"}\n\n` +
+      `*Message:*\n${message}`;
+
+    const whatsappURL = `https://wa.me/917736040267?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
   };
-
   return (
     <div className="contact-container">
       <div className="contact-layout">
@@ -74,20 +75,6 @@ export default function Contact() {
                 value={formData.phone}
                 onChange={handleChange}
               />
-            </div>
-            <div className="form-group">
-              <select
-                name="pronouns"
-                value={formData.pronouns}
-                onChange={handleChange}
-                required
-              >
-                <option value="" disabled>Preferred Pronouns *</option>
-                <option value="He/Him">He/Him</option>
-                <option value="She/Her">She/Her</option>
-                <option value="They/Them">They/Them</option>
-                <option value="Other / Prefer not to say">Other / Prefer not to say</option>
-              </select>
             </div>
 
             <h3 className="form-section-title font-display">How can we help?</h3>

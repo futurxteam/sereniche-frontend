@@ -46,7 +46,7 @@ export default function Impact() {
         {/* BACK IMAGE */}
         <motion.div className="impact-img img-back" style={{ y: imageY1 }}>
           <motion.img
-            src="/journal/2.png"
+            src="/journal/2.webp"
             alt=""
             style={{ y: innerY1 }}
           />
@@ -55,7 +55,7 @@ export default function Impact() {
         {/* FRONT IMAGE */}
         <motion.div className="impact-img img-front" style={{ y: imageY2 }}>
           <motion.img
-            src="/journal/1.png"
+            src="/journal/1.webp"
             alt=""
             style={{ y: innerY2 }}
           />

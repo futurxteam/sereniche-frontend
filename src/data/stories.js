@@ -54,8 +54,8 @@ export const stories = [
     headline: "Learning to let people in.",
     excerpt:
       "Daniel had spent his whole life being the reliable one   for everyone else. Anxiety kept him at arm's length from his own emotions. Therapy helped him build the kind of closeness he had always longed for.",
-    heroImage: "/stories/1.png",
-    portraitImage: "/stories/2.png",
+    heroImage: "/stories/1.webp",
+    portraitImage: "/stories/2.webp",
     fullContent: [
       {
         type: "paragraph",

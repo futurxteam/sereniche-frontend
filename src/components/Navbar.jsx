@@ -10,23 +10,24 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const NAVBAR_H = 90;
+    const MID_Y = 42; // vertical midpoint of the navbar
 
-    const overlapsNavbar = (selector) => {
-      const el = document.querySelector(selector);
-      if (!el) return false;
-      const { top, bottom } = el.getBoundingClientRect();
-      return top < NAVBAR_H && bottom > 0;
+    const coversMid = (selector) => {
+      const elements = document.querySelectorAll(selector);
+      for (const el of elements) {
+        const { top, bottom } = el.getBoundingClientRect();
+        if (top <= MID_Y && bottom > MID_Y) return true;
+      }
+      return false;
     };
 
     const check = () => {
-      const isOverLight =
-        overlapsNavbar(".navbar-dark-zone") ||
-        overlapsNavbar(".light-section") ||
-        overlapsNavbar(".faq-bg") ||
-        overlapsNavbar(".white-footer-section");
-
-      setIsLight(isOverLight);
+      const overDark = coversMid(".navbar-dark-zone");
+      const overLight =
+        coversMid(".light-section") ||
+        coversMid(".faq-bg") ||
+        coversMid(".white-footer-section");
+      setIsLight(overLight && !overDark);
     };
 
     window.addEventListener("scroll", check, { passive: true });
@@ -40,18 +41,18 @@ export default function Navbar() {
 
   return (
     <>
-      {/* NAVBAR */}
+      {/* GLASS BACKGROUND (separate layer, never overlaps nav contents) */}
+      <div className="nav-bg-overlay" />
+
+      {/* NAVBAR CONTENTS */}
       <nav
         ref={navRef}
-        className={`glass-navbar ${isLight ? "dark" : ""}${isOpen ? " menu-open" : ""}`}
+        className={`glass-navbar${isLight ? " dark" : ""}${isOpen ? " menu-open" : ""}`}
       >
-        {/* Fading Glass Background Layer */}
-        <div className="nav-bg-overlay" />
-
         <div className="nav-container">
           <Link className="nav-logo sereniche-logo-wrapper" to="/">
             <img
-              src={isLight ? "/Sereniche academy-dark.png" : "/Sereniche academy-light.png"}
+              src={isLight ? "/Sereniche academy-dark.webp" : "/Sereniche academy-light.webp"}
               alt="Sereniche"
               className="nav-logo-img sereniche-logo"
             />
@@ -63,7 +64,6 @@ export default function Navbar() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className="nav-actions">
               <button
@@ -85,7 +85,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* ✅ MOBILE FULLSCREEN MENU (OUTSIDE NAVBAR) */}
+      {/* ✅ MOBILE FULLSCREEN MENU */}
       <div className={`nav-menu mobile ${isOpen ? "open" : ""}`}>
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
@@ -101,7 +101,6 @@ export default function Navbar() {
           >
             Contact Us
           </button>
-          {/* Explicit close for mobile */}
           <button
             className="mobile-close-btn"
             onClick={() => setIsOpen(false)}
@@ -110,7 +109,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
     </>
   );
 }

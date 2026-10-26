@@ -25,7 +25,7 @@ export default function InsightPage() {
       {/* Hero banner */}
       <div className="ip-hero navbar-dark-zone" ref={ref}>
         <motion.img
-          src="/subpagehero/bg3.png"
+          src="/subpagehero/bg3.webp"
           className="ip-hero-bg"
           style={{ y: imageY }}
         />

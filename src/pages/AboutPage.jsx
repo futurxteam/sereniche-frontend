@@ -30,7 +30,7 @@ function TeamCard({ img, name, role, credentials, bio, offsetClass, cardSpeed = 
 const teamMembers = [
   // ── Row 1 ──
   {
-    img: "/dr/Dr Femi Mol.jpg",
+    img: "/dr/Dr Femi Mol.webp",
     name: "Dr. Femi",
     role: "Consultant Psychiatrist",
     credentials: "MBBS, MD Psychiatry, Fellowship in Sexual Medicine",
@@ -39,7 +39,7 @@ const teamMembers = [
     offsetClass: "",
   },
   {
-    img: "/dr/Dr Benzir Hussain.jpg",
+    img: "/dr/Dr Benzir Hussain.webp",
     name: "Dr. Benzir Hussain",
     role: "Consultant Psychiatrist",
     credentials: "MBBS, MD Psychiatry, MBA Healthcare Management",
@@ -48,7 +48,7 @@ const teamMembers = [
     offsetClass: "offset",
   },
   {
-    img: "/dr/Dr Shemeena.jpg",
+    img: "/dr/Dr Shemeena.webp",
     name: "Dr. Shemeena K",
     role: "Consultant Psychiatrist",
     credentials: "MBBS, MD Psychiatry (NIMHANS)",
@@ -58,7 +58,7 @@ const teamMembers = [
   },
   // ── Row 2 ──
   {
-    img: "/dr/Dr Aswathy Anand.jpg",
+    img: "/dr/Dr Aswathy Anand.webp",
     name: "Dr. Aswathy Anand",
     role: "Consultant Psychologist",
     credentials: "MSc, MPhil, PhD, PGCFM",
@@ -67,7 +67,7 @@ const teamMembers = [
     offsetClass: "offset",
   },
   {
-    img: "/dr/Mary Anusha Sebastain.jpg",
+    img: "/dr/Mary Anusha Sebastain.webp",
     name: "Mary Anusha Sebastian",
     role: "RCI Licensed Clinical Psychologist",
     credentials: "BSc, MSc, M.Phil Clinical Psychology – IMHANS",
@@ -76,7 +76,7 @@ const teamMembers = [
     offsetClass: "",
   },
   {
-    img: "/dr/Fr. Ritto Mathew.jpg",
+    img: "/dr/Fr. Ritto Mathew.webp",
     name: "Fr. Ritto Mathew",
     role: "Mental Health Professional",
     credentials: "MSW (Medical & Psychiatry), DCP",
@@ -85,7 +85,7 @@ const teamMembers = [
     offsetClass: "offset",
   },
   {
-    img: "/dr/Uveysudheen KH.jpg",
+    img: "/dr/Uveysudheen KH.webp",
     name: "Uveysudheen K H",
     role: "Counselling Psychologist & Training and Development Consultant",
     credentials: "BSc, MSc Counselling Psychology, University of Madras (Gold Medal)",
@@ -112,7 +112,7 @@ export default function AboutPage() {
       {/* Hero banner */}
       <div className="ap-hero navbar-dark-zone" ref={ref}>
         <motion.img
-          src="/subpagehero/bg3.png"
+          src="/subpagehero/bg3.webp"
           className="ap-hero-bg"
           style={{ y: imageY, scale: 1.15 }}
         />

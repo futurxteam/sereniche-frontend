@@ -61,7 +61,7 @@ function StoriesHero() {
   return (
     <div className="st-hero navbar-dark-zone" ref={heroRef}>
       <motion.img
-        src="/subpagehero/bg3.png"
+        src="/subpagehero/bg3.webp"
         className="st-hero-bg"
         style={{ y: bgY }}
         alt=""

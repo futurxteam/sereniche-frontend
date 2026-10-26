@@ -53,7 +53,7 @@ export default function ServicePage() {
       {/* Hero banner */}
       <div className="sp-hero navbar-dark-zone" ref={ref}>
         <motion.img
-          src="/subpagehero/bg3.png"
+          src="/subpagehero/bg3.webp"
           className="sp-hero-bg"
           style={{ y: imageY }}
         />

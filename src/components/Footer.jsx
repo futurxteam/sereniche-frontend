@@ -18,7 +18,7 @@ export default function Footer() {
 
       {/* Background */}
       <motion.img
-        src="/footer.jpg"
+        src="/footer.webp"
         className="footer-image"
         style={{ y: imageY }}
       />

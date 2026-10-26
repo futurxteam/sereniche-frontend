@@ -30,7 +30,7 @@ export default function Journal() {
 
         <div className="journal-card">
           <div className="blob">
-            <img src="/journal/1.png" alt="" />
+            <img src="/journal/1.webp" alt="" />
           </div>
           <h3>Learning to Pause Without Guilt.</h3>
           <p>Taking a break isn’t failure   it’s part of the process.</p>
@@ -39,7 +39,7 @@ export default function Journal() {
 
         <div className="journal-card center">
           <div className="blob">
-            <img src="/journal/2.png" alt="" />
+            <img src="/journal/2.webp" alt="" />
           </div>
           <h3>What Makes Therapy Work?</h3>
           <p>Beyond techniques or tools, therapy works best when it feels safe and human.</p>
@@ -48,7 +48,7 @@ export default function Journal() {
 
         <div className="journal-card">
           <div className="blob">
-            <img src="/journal/3.png" alt="" />
+            <img src="/journal/3.webp" alt="" />
           </div>
           <h3>The Gentle Art of Slowing Down.</h3>
           <p>Slowing down is more than rest   it’s a conscious choice.</p>

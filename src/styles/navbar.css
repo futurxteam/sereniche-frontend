@@ -12,39 +12,30 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Transparent frosted glass that fades out at the bottom - no hard edge */
 .nav-bg-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: rgba(18, 15, 25, 0.72);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  pointer-events: none;
-  transition: background 0.3s ease;
-}
-
-/* STRAIGHT DIVIDER LINE UNDERNEATH NAVBAR */
-.nav-divider-line {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    rgba(160, 103, 188, 0.1) 0%,
-    rgba(160, 103, 188, 0.45) 30%,
-    rgba(212, 175, 55, 0.45) 50%,
-    rgba(160, 103, 188, 0.45) 70%,
-    rgba(160, 103, 188, 0.1) 100%
-  );
+  height: 112px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+  border: none;
+  box-shadow: none;
   pointer-events: none;
-  z-index: 10;
-  transition: background 0.3s ease;
+  z-index: 999;
+}
+
+/* Divider line placeholder */
+.nav-divider-line {
+  display: none !important;
 }
 
 /* ================================
@@ -62,7 +53,7 @@
 }
 
 /* ================================================
-   SERENICHE LOGO CONTAINER & HOVER INTERACTION
+   SERENICHE LOGO CONTAINER & CRISP RENDERING
    ================================================ */
 .nav-logo,
 .sereniche-logo-wrapper {
@@ -75,49 +66,47 @@
   z-index: 130 !important;
 }
 
-/* Logo Image Base State */
+/* Logo Image - Vector-like Crisp, Absolutely No Blur */
 .nav-logo-img,
 .sereniche-logo {
-  height: 150px;
+  height: 46px;
   width: auto;
   object-fit: contain;
-  transform-origin: center center;
   cursor: pointer;
   display: block;
   pointer-events: auto;
-  will-change: transform, filter;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.28s ease;
-  filter: drop-shadow(0 0 0px transparent) brightness(1);
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: opacity 0.2s ease;
 }
 
-/* Logo Image Hover State (Scale + Purple/Gold Glow + Brightness) */
+/* Logo Hover State - 100% Crisp, No Bilinear Scaling Blur */
 .nav-logo:hover .nav-logo-img,
 .sereniche-logo-wrapper:hover .sereniche-logo,
 .nav-logo-img:hover,
 .sereniche-logo:hover {
-  transform: scale(1.06);
-  opacity: 1;
-  filter: drop-shadow(0 0 12px rgba(196, 181, 253, 0.65)) 
-          drop-shadow(0 0 22px rgba(212, 175, 55, 0.45))
-          brightness(1.08);
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
 }
 
-/* Light Theme Logo Hover State */
-.glass-navbar.dark .nav-logo:hover .nav-logo-img,
-.glass-navbar.dark .sereniche-logo-wrapper:hover .sereniche-logo,
-.glass-navbar.dark .nav-logo-img:hover,
-.glass-navbar.dark .sereniche-logo:hover {
-  transform: scale(1.06);
-  opacity: 1;
-  filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.55)) 
-          drop-shadow(0 0 22px rgba(212, 175, 55, 0.4))
-          brightness(1.06);
+/* Flat, solid navbar contents - no glow, shadow, stroke or bloom anywhere */
+.nav-container,
+.nav-container * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-text-stroke: 0 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* ================================
-   NAV LINKS DEFAULT (dark bg)
+   NAV LINKS (Consistent Crisp White)
    ================================ */
 .nav-links {
   display: flex;
@@ -129,16 +118,22 @@
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.92rem;
+  color: #ffffff;
+  font-size: 0.94rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   position: relative;
-  transition: color 0.3s ease;
+  text-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #c4b5fd;
+  color: #ffffff;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  filter: none !important;
 }
 
 .nav-links a::after {
@@ -147,9 +142,10 @@
   left: 0;
   bottom: -4px;
   width: 0%;
-  height: 1.5px;
-  background: linear-gradient(90deg, #c4b5fd, #d4af37);
-  transition: width 0.3s ease;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-links a:hover::after {
@@ -157,75 +153,62 @@
 }
 
 /* ================================
-   CONTACT US BUTTON OUTLINED PILL
+   CONTACT US BUTTON (Consistent Crisp Pill)
    ================================ */
 .login-btn {
   background: transparent;
-  border: 1.5px solid rgba(196, 181, 253, 0.45);
+  border: 1.5px solid #ffffff;
   color: #ffffff;
   padding: 8px 22px;
   border-radius: 9999px;
   font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .login-btn:hover {
-  background: rgba(160, 103, 188, 0.18);
-  border-color: #d4af37;
-  color: #ffffff;
-  box-shadow: 0 0 16px rgba(196, 181, 253, 0.35), 0 0 6px rgba(212, 175, 55, 0.2);
-  transform: translateY(-1px);
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #1a1a24;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 /* ================================
-   🌕 LIGHT MODE OVERLAY .glass-navbar.dark
+   DARK THEME (over light backgrounds): dark text + dark logo
+   Navbar background stays the same transparent glass.
    ================================ */
-.glass-navbar.dark {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.glass-navbar.dark .nav-bg-overlay {
-  background: rgba(255, 255, 255, 0.88);
-}
-
-.glass-navbar.dark .nav-divider-line {
-  background: linear-gradient(
-    90deg,
-    rgba(160, 103, 188, 0.15) 0%,
-    rgba(160, 103, 188, 0.5) 30%,
-    rgba(180, 140, 40, 0.5) 50%,
-    rgba(160, 103, 188, 0.5) 70%,
-    rgba(160, 103, 188, 0.15) 100%
-  );
-}
-
 .glass-navbar.dark .nav-links a {
-  color: #2b2b36;
+  color: #1a1a24;
 }
 
 .glass-navbar.dark .nav-links a:hover {
-  color: #7c3aed;
+  color: #1a1a24;
 }
 
 .glass-navbar.dark .nav-links a::after {
-  background: linear-gradient(90deg, #7c3aed, #d4af37);
+  background: #1a1a24;
 }
 
 .glass-navbar.dark .login-btn {
   background: transparent;
-  border: 1.5px solid rgba(124, 58, 237, 0.45);
-  color: #2b2b36;
+  border-color: #1a1a24;
+  color: #1a1a24;
 }
 
 .glass-navbar.dark .login-btn:hover {
-  background: rgba(124, 58, 237, 0.08);
-  border-color: #a067bc;
-  color: #7c3aed;
-  box-shadow: 0 0 14px rgba(124, 58, 237, 0.2);
-  transform: translateY(-1px);
+  background: rgba(0, 0, 0, 0.06);
+  border-color: #1a1a24;
+  color: #1a1a24;
+}
+
+.glass-navbar.dark .hamburger {
+  background: #1a1a24;
 }
 
 /* ================================
@@ -245,13 +228,9 @@
   display: block;
   width: 26px;
   height: 2px;
-  background: white;
+  background: #ffffff;
   position: relative;
   transition: all 0.3s;
-}
-
-.glass-navbar.dark .hamburger {
-  background: #222;
 }
 
 .hamburger::before,
@@ -265,8 +244,13 @@
   transition: all 0.3s;
 }
 
-.hamburger::before { top: -8px; }
-.hamburger::after { top: 8px; }
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
 
 .menu-open .hamburger {
   background: transparent !important;
@@ -275,18 +259,13 @@
 .menu-open .hamburger::before {
   transform: rotate(45deg);
   top: 0;
-  background: white !important;
+  background: #ffffff !important;
 }
 
 .menu-open .hamburger::after {
   transform: rotate(-45deg);
   top: 0;
-  background: white !important;
-}
-
-.glass-navbar.dark.menu-open .hamburger::before,
-.glass-navbar.dark.menu-open .hamburger::after {
-  background: #222 !important;
+  background: #ffffff !important;
 }
 
 /* Desktop menu container */
@@ -313,12 +292,12 @@
   }
 
   .glass-navbar {
-    height: 76px;
+    height: 74px;
   }
 
   .nav-logo-img,
   .sereniche-logo {
-    height: 130px;
+    height: 40px;
   }
 
   .nav-toggle {
@@ -331,7 +310,7 @@
     left: 0;
     right: 0;
     height: 100vh;
-    background: rgba(15, 12, 22, 0.96) !important;
+    background: rgba(18, 14, 28, 0.98) !important;
     backdrop-filter: blur(25px) saturate(160%);
     -webkit-backdrop-filter: blur(25px) saturate(160%);
     flex-direction: column !important;
@@ -345,17 +324,13 @@
     visibility: hidden;
   }
 
-  .glass-navbar.dark .nav-menu.mobile {
-    background: rgba(255, 255, 255, 0.97) !important;
-  }
-
   .nav-menu.mobile.open {
     transform: translateY(0) !important;
     visibility: visible !important;
   }
 
   .nav-links {
-    display: flex !important; 
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     gap: 2rem !important;
@@ -372,15 +347,11 @@
 
   .nav-links a {
     font-size: 1.6rem !important;
-    color: white !important;
+    color: #ffffff !important;
     font-weight: 500;
     display: block;
     width: 100%;
     text-decoration: none;
-  }
-
-  .glass-navbar.dark .nav-links a {
-    color: #222 !important;
   }
 
   .nav-actions {
@@ -395,22 +366,17 @@
   .login-btn {
     padding: 12px 50px !important;
     font-size: 1rem !important;
-    border: 1.5px solid rgba(196, 181, 253, 0.6) !important;
-    color: white !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.7) !important;
+    color: #ffffff !important;
     border-radius: 9999px;
     width: 80%;
     max-width: 280px;
   }
 
-  .glass-navbar.dark .login-btn {
-    border-color: #a067bc !important;
-    color: #222 !important;
-  }
-
   .mobile-close-btn {
     background: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    color: #ffffff;
     padding: 10px 36px;
     border-radius: 9999px;
     font-size: 0.9rem;
@@ -418,10 +384,5 @@
     width: 80%;
     max-width: 280px;
     transition: all 0.2s;
-  }
-
-  .glass-navbar.dark .mobile-close-btn {
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #222;
   }
 }

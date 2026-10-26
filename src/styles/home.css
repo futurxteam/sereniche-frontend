@@ -146,7 +146,7 @@
 .hero-bg {
   /* Placeholder gradient if image doesn't load/exist */
   background: linear-gradient(to bottom right, #1a1a2e, #16213e);
-  background-image: url("/hero.png");
+  background-image: url("/hero.webp");
   background-size: cover;
   background-position: center;
 }
@@ -204,13 +204,13 @@
 
 .services-bg {
   background: linear-gradient(to bottom right, #1f4037, #99f2c8);
-  background-image: url("/services.jpg");
+  background-image: url("/services.webp");
   background-size: cover;
   background-position: center;
 }
 
 .info-bg {
-  background-image: linear-gradient(to bottom right, rgba(43, 88, 118, 0.7), rgba(78, 67, 118, 0.7)), url("/bg4.jpg");
+  background-image: linear-gradient(to bottom right, rgba(43, 88, 118, 0.7), rgba(78, 67, 118, 0.7)), url("/bg4.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -222,7 +222,7 @@
 
 .faq-bg-main {
   background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-  background-image: url("/bg3.png");
+  background-image: url("/bg3.webp");
   background-size: cover;
   background-position: center;
 
@@ -249,7 +249,7 @@
 
   /* Explicitly apply the exact background and fix it to match the fixed layer */
   background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-  background-image: url("/bg3.png");
+  background-image: url("/bg3.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -538,7 +538,7 @@ p {
   #hero {
     min-height: 100vh !important;
     height: auto !important;
-    background: linear-gradient(to bottom right, rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.7)), url("/hero.png");
+    background: linear-gradient(to bottom right, rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.7)), url("/hero.webp");
     background-size: cover;
     background-position: center center !important;
     display: flex !important;
@@ -613,7 +613,7 @@ p {
 
 
   .info-bg {
-    background-image: url("/bg4.jpg") !important;
+    background-image: url("/bg4.webp") !important;
     /* Simple image bg */
     background-attachment: scroll !important;
     background-repeat: no-repeat !important;
