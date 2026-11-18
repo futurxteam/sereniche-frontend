@@ -1,21 +1,24 @@
-import { useNavigate } from "react-router-dom";
 import "./style/floatingcontactwidget.css";
 
+const BOOKING_URL = "https://sereniche.smrkomed.com/";
+
 export default function FloatingContactWidget() {
-  const navigate = useNavigate();
+  const handleBookNow = () => {
+    window.location.href = BOOKING_URL;
+  };
 
   return (
     <div
       className="floating-contact-widget"
-      onClick={() => navigate("/contact")}
+      onClick={handleBookNow}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
-          navigate("/contact");
+          handleBookNow();
         }
       }}
-      title="Click to Contact Us"
+      title="Click to Book Now"
     >
       <div className="widget-gold-indicator" />
       <div className="widget-content">
@@ -28,10 +31,10 @@ export default function FloatingContactWidget() {
           className="widget-btn"
           onClick={(e) => {
             e.stopPropagation();
-            navigate("/contact");
+            handleBookNow();
           }}
         >
-          Contact Us
+          Book Now
         </button>
       </div>
     </div>

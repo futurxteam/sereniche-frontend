@@ -110,7 +110,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero banner */}
-      <div className="ap-hero navbar-dark-zone" ref={ref}>
+      <div className="ap-hero light-section" ref={ref}>
         <motion.img
           src="/subpagehero/bg3.webp"
           className="ap-hero-bg"

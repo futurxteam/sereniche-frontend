@@ -58,9 +58,9 @@ export default function FAQ3() {
             </p>
             <button
               className="faq3-btn"
-              onClick={() => navigate("/contact")}
+              onClick={() => { window.location.href = "https://sereniche.smrkomed.com/"; }}
             >
-              CONTACT US <span className="faq3-btn-dot">•</span>
+              BOOK NOW <span className="faq3-btn-dot">•</span>
             </button>
           </div>
         </div>

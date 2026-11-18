@@ -132,12 +132,12 @@ export default function ServiceDetailPage() {
 
             <div className="sd-cta-card">
               <p>Ready to take the first step?</p>
-              <Link
-                to="/contact"
+              <a
+                href="https://sereniche.smrkomed.com/"
                 className="sd-cta-btn"
               >
-                Contact Us
-              </Link>
+                Book Now
+              </a>
             </div>
           </div>
         </div>

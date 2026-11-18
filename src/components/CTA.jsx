@@ -36,9 +36,9 @@ export default function CTA() {
 
           <button
             className="cta-btn"
-            onClick={() => navigate("/contact")}
+            onClick={() => { window.location.href = "https://sereniche.smrkomed.com/"; }}
           >
-            CONTACT US <span className="cta-arrow">→</span>
+            BOOK NOW <span className="cta-arrow">→</span>
           </button>
         </motion.div>
 

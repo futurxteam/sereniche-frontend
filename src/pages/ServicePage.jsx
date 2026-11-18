@@ -17,7 +17,7 @@ function WideServiceCard({ service, isFirst }) {
   const bgY = useTransform(scrollYProgress, [0, 1], [-80, 80]);
 
   return (
-    <div className={`wide-service-card ${isFirst ? 'navbar-dark-zone' : ''}`} ref={cardRef}>
+    <div className="wide-service-card navbar-dark-zone" ref={cardRef}>
       <motion.img
         src={service.image}
         alt={service.title}
@@ -51,7 +51,7 @@ export default function ServicePage() {
       <Navbar />
 
       {/* Hero banner */}
-      <div className="sp-hero navbar-dark-zone" ref={ref}>
+      <div className="sp-hero light-section" ref={ref}>
         <motion.img
           src="/subpagehero/bg3.webp"
           className="sp-hero-bg"

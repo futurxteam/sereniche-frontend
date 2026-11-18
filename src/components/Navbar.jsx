@@ -32,8 +32,17 @@ export default function Navbar() {
 
     window.addEventListener("scroll", check, { passive: true });
     check();
-    return () => window.removeEventListener("scroll", check);
+    const timer = setTimeout(check, 100);
+    return () => {
+      window.removeEventListener("scroll", check);
+      clearTimeout(timer);
+    };
   }, [location.pathname]);
+
+  const BOOKING_URL = "https://sereniche.smrkomed.com/";
+  const handleBookNow = () => {
+    window.location.href = BOOKING_URL;
+  };
 
   useEffect(() => {
     setIsOpen(false);
@@ -68,9 +77,9 @@ export default function Navbar() {
             <div className="nav-actions">
               <button
                 className="login-btn"
-                onClick={() => navigate("/contact")}
+                onClick={handleBookNow}
               >
-                Contact Us
+                Book Now
               </button>
             </div>
           </div>
@@ -91,15 +100,15 @@ export default function Navbar() {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/services">Services</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><a href={BOOKING_URL}>Book Now</a></li>
         </ul>
 
         <div className="nav-actions">
           <button
             className="login-btn"
-            onClick={() => navigate("/contact")}
+            onClick={handleBookNow}
           >
-            Contact Us
+            Book Now
           </button>
           <button
             className="mobile-close-btn"

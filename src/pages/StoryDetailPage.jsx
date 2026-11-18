@@ -78,9 +78,9 @@ export default function StoryDetailPage() {
               );
             })}
 
-            <Link to="/contact" className="sdt-book-btn">
+            <a href="https://sereniche.smrkomed.com/" className="sdt-book-btn">
               Begin your own journey →
-            </Link>
+            </a>
           </div>
 
           {/* Sticky portrait aside */}

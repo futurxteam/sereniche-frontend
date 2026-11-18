@@ -56,8 +56,7 @@ export default function Footer() {
             </div>
 
             <div>
-
-              <Link to="/contact">Contact Us</Link>
+              <a href="https://sereniche.smrkomed.com/">Book Now</a>
             </div>
           </div>
         </div>

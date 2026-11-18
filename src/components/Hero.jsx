@@ -1,9 +1,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import "./style/hero.css";
 
 export default function Hero() {
-  const navigate = useNavigate();
   const { scrollYProgress } = useScroll();
 
   // --- HERO CONTENT TRANSFORMS (all happen in first 25% of scroll) ---
@@ -37,22 +35,13 @@ export default function Hero() {
         </h1>
       </motion.div>
 
-      {/* RIGHT   Description + Button (Entry animation reveals from down with slight delay) */}
+      {/* RIGHT side */}
       <motion.div
         className="hero-right"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-      >
-
-
-        <button
-          className="hero-button"
-          onClick={() => navigate("/contact")}
-        >
-          CONTACT US
-        </button>
-      </motion.div>
+      />
     </motion.div>
   );
 }

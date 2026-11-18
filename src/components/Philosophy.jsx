@@ -89,9 +89,9 @@ export default function Philosophy() {
       {/* Button */}
       <button
         className="phil-btn"
-        onClick={() => navigate("/contact")}
+        onClick={() => { window.location.href = "https://sereniche.smrkomed.com/"; }}
       >
-        CONTACT US <span className="phil-btn-dot">•</span>
+        BOOK NOW <span className="phil-btn-dot">•</span>
       </button>
     </section>
   );
