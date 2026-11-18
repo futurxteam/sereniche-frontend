@@ -47,43 +47,43 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 12px 24px;
+  gap: 12px;
+  padding: 15px 30px;
   border-radius: 9999px;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .hero-pill-contact {
   background: transparent;
   color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(255, 255, 255, 0.95);
 }
 
 .hero-pill-contact:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
 }
 
 .hero-pill-book {
   background: #7942e6;
   color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(255, 255, 255, 0.95);
 }
 
 .hero-pill-book:hover {
   background: #6a32dc;
   border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(121, 66, 230, 0.45);
+  box-shadow: 0 6px 24px rgba(121, 66, 230, 0.5);
 }
 
 .hero-btn-icon {
@@ -119,39 +119,40 @@
     flex-wrap: nowrap !important;
     justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     width: auto;
     margin: 0;
   }
 
   .hero-pill-btn {
-    padding: 11px 16px;
-    font-size: clamp(0.74rem, 3.2vw, 0.88rem);
-    gap: 6px;
+    padding: 13px 20px;
+    font-size: clamp(0.82rem, 3.4vw, 0.96rem);
+    font-weight: 600;
+    gap: 8px;
     width: auto;
+    border-width: 2px;
   }
 
   .hero-btn-icon {
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
   }
 }
 
 @media (max-width: 380px) {
   .hero-buttons-wrap {
     gap: 8px;
-    margin-top: 10px;
   }
 
   .hero-pill-btn {
-    padding: 9px 10px;
-    font-size: 0.72rem;
-    gap: 4px;
+    padding: 11px 13px;
+    font-size: 0.78rem;
+    gap: 6px;
   }
 
   .hero-btn-icon {
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
   }
 }
 
