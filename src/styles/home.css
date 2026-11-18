@@ -536,32 +536,50 @@ p {
 
   /* Specific section resets */
   #hero {
+    min-height: 100svh !important;
     min-height: 100vh !important;
-    height: auto !important;
+    height: 100svh !important;
     background: linear-gradient(to bottom right, rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.7)), url("/hero.webp");
     background-size: cover;
     background-position: center center !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
     align-items: center !important;
     text-align: center !important;
-    padding: 120px 8% 60px 8% !important;
+    padding: 100px 6% 16px 6% !important;
+    box-sizing: border-box !important;
   }
 
   .hero-container {
     display: flex !important;
     flex-direction: column !important;
-    gap: 30px !important;
-    text-align: center !important;
+    justify-content: space-between !important;
     align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex: 1 !important;
+    min-height: calc(100svh - 116px) !important;
+  }
+
+  .hero-left {
+    margin-top: 10px !important;
+    width: 100% !important;
   }
 
   #hero h1 {
-    font-size: 3.5rem !important;
-    margin-bottom: 20px !important;
+    font-size: clamp(2.6rem, 7.8vw, 3.4rem) !important;
+    margin: 0 !important;
     color: white !important;
-    line-height: 1 !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-right {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   #hero p {

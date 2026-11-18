@@ -34,6 +34,13 @@
   background: #ffffff;
 }
 
+.floating-contact-widget.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(24px);
+  visibility: hidden;
+}
+
 /* Subtle Gold Top Accent Line inside widget */
 .widget-gold-indicator {
   position: absolute;
