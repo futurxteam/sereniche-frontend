@@ -1,15 +1,15 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "online.sereniche.com"
         }
       ],
-      "destination": "https://sereniche.smrkomed.com/:path*",
-      "permanent": true
+      "destination": "https://sereniche.smrkomed.com/",
+      "permanent": false
     }
   ],
   "rewrites": [
