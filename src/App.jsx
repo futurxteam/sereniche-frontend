@@ -12,6 +12,11 @@ import StoriesPage from "./pages/StoriesPage";
 import StoryDetailPage from "./pages/StoryDetailPage";
 
 function App() {
+  if (typeof window !== "undefined" && window.location.hostname === "online.sereniche.com") {
+    window.location.replace("https://sereniche.smrkomed.com" + window.location.pathname + window.location.search);
+    return null;
+  }
+
   return (
     <BrowserRouter>
       <ScrollToTop />
