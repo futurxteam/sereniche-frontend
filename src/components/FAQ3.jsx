@@ -58,7 +58,7 @@ export default function FAQ3() {
             </p>
             <button
               className="faq3-btn"
-              onClick={() => { window.location.href = "https://sereniche.smrkomed.com/"; }}
+              onClick={() => { window.location.href = "https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala"; }}
             >
               BOOK NOW <span className="faq3-btn-dot">•</span>
             </button>

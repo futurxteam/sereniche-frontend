@@ -56,7 +56,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <a href="https://sereniche.smrkomed.com/">Book Now</a>
+              <a href="https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala">Book Now</a>
             </div>
           </div>
         </div>

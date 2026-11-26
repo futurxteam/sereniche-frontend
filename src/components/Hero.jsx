@@ -60,7 +60,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://sereniche.smrkomed.com/"
+            href="https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala"
             className="hero-pill-btn hero-pill-book"
           >
             <svg

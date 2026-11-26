@@ -36,7 +36,7 @@ export default function CTA() {
 
           <button
             className="cta-btn"
-            onClick={() => { window.location.href = "https://sereniche.smrkomed.com/"; }}
+            onClick={() => { window.location.href = "https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala"; }}
           >
             BOOK NOW <span className="cta-arrow">→</span>
           </button>

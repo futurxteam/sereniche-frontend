@@ -89,7 +89,7 @@ export default function Philosophy() {
       {/* Button */}
       <button
         className="phil-btn"
-        onClick={() => { window.location.href = "https://sereniche.smrkomed.com/"; }}
+        onClick={() => { window.location.href = "https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala"; }}
       >
         BOOK NOW <span className="phil-btn-dot">•</span>
       </button>

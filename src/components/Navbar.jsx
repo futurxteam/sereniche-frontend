@@ -39,7 +39,7 @@ export default function Navbar() {
     };
   }, [location.pathname]);
 
-  const BOOKING_URL = "https://sereniche.smrkomed.com/";
+  const BOOKING_URL = "https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala";
   const handleBookNow = () => {
     window.location.href = BOOKING_URL;
   };

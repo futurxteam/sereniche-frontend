@@ -78,7 +78,7 @@ export default function StoryDetailPage() {
               );
             })}
 
-            <a href="https://sereniche.smrkomed.com/" className="sdt-book-btn">
+            <a href="https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala" className="sdt-book-btn">
               Begin your own journey →
             </a>
           </div>

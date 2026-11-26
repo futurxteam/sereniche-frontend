@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./style/floatingcontactwidget.css";
 
-const BOOKING_URL = "https://sereniche.smrkomed.com/";
+const BOOKING_URL = "https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala";
 
 export default function FloatingContactWidget() {
   const location = useLocation();

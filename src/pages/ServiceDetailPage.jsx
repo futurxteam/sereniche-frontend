@@ -133,7 +133,7 @@ export default function ServiceDetailPage() {
             <div className="sd-cta-card">
               <p>Ready to take the first step?</p>
               <a
-                href="https://sereniche.smrkomed.com/"
+                href="https://telemed.smrkomed.com/?clinic=sereniche-wellness-edappally-kochi-kerala"
                 className="sd-cta-btn"
               >
                 Book Now
